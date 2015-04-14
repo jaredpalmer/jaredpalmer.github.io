@@ -1,0 +1,29 @@
+$sans: 'freight-sans-pro', 'Helvetica Neue';
+$serif: 'Droid Serif', 'Georgia';
+$fontDefault: $sans;
+$fontHeadings: $sans;
+$headingWeight: 400;
+$headingColor: #222;
+$fontBase: 110%;
+$rem-base: 16px !default;
+
+$colorGray--dark: #333;
+$colorGray: #555;
+$colorGray--light: #888;
+$colorGray--lightest: #eee;
+$colorOffWhite: #f9f9f9;
+$colorBlue: #28affa;
+
+
+$colorBody: #555;
+$colorText: #555;
+$colorLink: #5694f1;
+
+$small: rem-calc(600);
+$medium: rem-calc(960);
+$large: rem-calc(1100);
+$graphite: #616d85;
+$blue: #28affa;
+$green: #7ddc16;
+$purple: #9178e2;
+$cyan: #2dd7aa;

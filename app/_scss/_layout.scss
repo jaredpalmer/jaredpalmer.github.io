@@ -1,0 +1,26 @@
+.content {
+  margin: 0 auto;
+  max-width: $small;
+  padding: 1rem;
+}
+
+.u-img-responsive {
+  width: 100%;
+}
+
+.u-center-block {
+  display: block;
+  margin: 0 auto;
+}
+
+.post {
+  img {
+    margin: 1.3em auto;
+    width: 100%;
+
+    @include large {
+      margin-left: -10%;
+      width: 120%;
+    }
+  }
+}
