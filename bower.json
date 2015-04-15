@@ -4,6 +4,7 @@
   "dependencies": {
     "normalize-css": "~3.0.1",
     "jquery": "~1.11.1",
-    "modernizr": "~2.8.3"
+    "modernizr": "~2.8.3",
+    "photoset-grid": "~1.0.1"
   }
 }

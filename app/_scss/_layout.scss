@@ -1,6 +1,6 @@
 .content {
   margin: 0 auto;
-  max-width: $small;
+  max-width: rem-calc(620);
   padding: 1rem;
 }
 
@@ -23,4 +23,25 @@
       width: 120%;
     }
   }
+}
+
+.photoset {
+  margin: 2rem auto;
+  transition: all .5s ease-out;
+  visibility: hidden;
+
+  @include medium {
+    margin: 0 -10%;
+    width: 120%;
+  }
+
+  @include large {
+    margin: 0 -50%;
+    width: 200%;
+  }
+}
+
+.photos {
+  font-size: 120%;
+  font-weight: 300;
 }
