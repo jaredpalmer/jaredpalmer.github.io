@@ -2,7 +2,7 @@
 layout: photo
 title:  "Austria"
 subtitle: "3 days of Skiing in the Alps"
-thumbnail-img: "img/Kitzbuhel3SBahn.jpg"
+thumbnail-img: "img/kitzbuhel/Kitzbuhel3SBahn.jpg"
 date: 2015-02-14
 tags:
 ---
@@ -54,7 +54,7 @@ Brent and I played out of bounds for most of the trip.
     <a href="../../../../img/kitzbuhel/KitzbuhelPanorama.jpg" data-size="1030x318">
       <img class="lazy" src="http://luis-almeida.github.io/unveil/img/loader.gif"  data-src="../../../../img/kitzbuhel/KitzbuhelSkis.jpg" alt="Summit of 3Sbahn in Kitzbuhel" >
     </a>
-    <figcaption itemprop="caption description">Image caption  3</figcaption>
+    <figcaption itemprop="caption description">Image caption 3</figcaption>
   </figure>
   <figure class="photoset-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <a href="../../../../img/kitzbuhel/KitzbuhelJared.jpg" itemprop="contentUrl" data-size="1024x768">
