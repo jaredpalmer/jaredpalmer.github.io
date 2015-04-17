@@ -1,112 +1,67 @@
 
-
-// html {
-//   font-size: 112%;
-// }
-
-// body {
-//   color: $colorBody;
-//   font-family: $fontDefault;
-//   font-size: $fontBase;
-//   font-weight: 400;
-//   line-height: 1.45;
-// }
-//
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6 {
-//   color: $headingColor;
-//   //  text-transform: uppercase;
-//   font-family: $fontHeadings;
-//   letter-spacing: -.02em;
-//   line-height: 1.2;
-//   margin: 1.414em 0 .5em;
-// }
-//
-// h1,
-// h2 {
-//   font-weight: 300;
-// }
-//
-// h3,
-// h4,
-// h5,
-// h6 {
-//   font-weight: 400;
-// }
-//
-// p,
-// ol,
-// ul,
-// li,
-// blockquote {
-//   margin-bottom: 1.6rem;
-//   line-height:1.6;
-// }
-//
-// h1 {
-//   font-size: 2.074em;
-// }
-//
-// h2 {
-//   font-size: 1.728em;
-// }
-//
-// h3 {
-//   font-size: 1.44em;
-// }
-//
-// h4 {
-//   font-size: 1.2em;
-// }
-h1,
-h2 {
-  font-weight: 300;
-  color: #000;
+html {
+  font-size: 18px;
 }
+
 body {
-  font-size: 1.125rem;
-  line-height: 1.6875rem;
-  margin: 0 auto;
-  color: $colorBody;
-  font-family: $fontDefault;
+  color: $bodyColor;
+  font-family: 'myriad-pro', 'Myriad Set Pro', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Arial', 'Verdana', 'sans-serif';
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $headingsColor;
+}
+
 h1 {
-  font-size: 3.8125rem;
-  line-height: 5.0625rem;
-  margin-top: 3.375rem;
-  margin-bottom: 1.6875rem;
+  font-size: 42px;
+  font-weight: 200;
+  letter-spacing: -1px;
+  line-height: 1.1429;
+  margin-bottom: 16px;
 }
+
 h2 {
-  font-size: 2.5625rem;
-  line-height: 3.375rem;
-  margin-top: 3.375rem;
-  margin-bottom: 1.6875rem;
+  font-size: 38px;
+  font-weight: 200;
+  letter-spacing: -1px;
+  line-height: 1.0526;
+  margin-bottom: 25px;
 }
+
 h3 {
-  font-size: 1.6875rem;
-  line-height: 1.6875rem;
-  margin-top: 1.6875rem;
-  margin-bottom: 1.6875rem;
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  line-height: 1.4545;
+  text-transform: uppercase;
+}
+
+p,
+ul,
+ol {
+  font-size: 18px;
   font-weight: 400;
+  line-height: 1.5556;
 }
-h4 {
-  font-size: 1.125rem;
-  line-height: 1.6875rem;
-  margin-top: 1.6875rem;
-  margin-bottom: 1.6875rem;
+
+a {
+  color: $linkColor;
+  text-decoration: none;
+  transition: opacity .25s ease;
+
+  &:hover {
+    opacity: .8;
+  }
 }
-p, ul, ol, pre, table, blockquote {
-  margin-top: 1.6875rem;
-  margin-bottom: 1.6875rem;
-}
+
 
 /* Sanitation */
 hr {
-  border: 1px solid;
+  border: 1px solid $hrColor;
   margin: -1px 0;
 }
 ul ul, ol ol, ul ol, ol ul {
@@ -125,15 +80,6 @@ sub {
   top: 0.4em;
 }
 
-a {
-  color: $colorLink;
-  text-decoration: none;
-  transition: opacity .25s ease;
-
-  &:hover {
-    opacity: .8;
-  }
-}
 
 pre,
 code {
@@ -178,23 +124,8 @@ p > code {
 }
 
 
-.list-unstyled {
-  list-style: none;
-  padding: 0;
-}
-
-.list-inline {
-  list-style: none;
-  padding: 0;
-
-  li {
-    display: inline;
-    margin-right: 20px;
-	}
-
-  li:last-child {
-    margin-right: 0;
-	}
+.title {
+  font-size: 50px;
 }
 
 .meta {
@@ -207,10 +138,4 @@ p > code {
   &--post {
     color: $blue;
   }
-}
-
-
-.post-title {
-  margin-bottom: 2rem;
-  margin-top: 0;
 }

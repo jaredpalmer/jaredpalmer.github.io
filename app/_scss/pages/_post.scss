@@ -1,0 +1,11 @@
+.post {
+  img {
+    margin: 1.3em auto;
+    width: 100%;
+
+    @include large {
+      margin-left: -10%;
+      width: 120%;
+    }
+  }
+}

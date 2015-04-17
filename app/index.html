@@ -4,7 +4,7 @@ title: Jared Palmer
 ---
 
 <header class="container">
-  <h1>Hi, I'm Jared.</h1>
+  <h1 class="title">Hi, I'm Jared.</h1>
   <p>I'm a freelance designer/dev living in the West Village and working out of Landmark Ventures in midtown Manhattan.</p>
   <p>Just before graduating from Cornell in 2013, I founded Skiptu, a lock screen publishing and advertising platform. Since then I've been heads down designing and developing apps and websites for myself and companies like Fox and Unilever.</p>
   <p>
@@ -22,13 +22,20 @@ title: Jared Palmer
     </article>
   {% endfor %}
 </section>
-<section class="posts-list container">
-  <h2>Photos</h2>
+
+<section class="photos-list clearfix container">
+
   {% for photo in site.photos %}
-  <article class="posts-list--item">
-    <time class="posts-list--time meta">{{ photo.date }}</time>
-    <h3 class="posts-list--title"><a href="{{ photo.url }}">{{ photo.title }}</a>
-    </h3>
+  <article class="photo-item clearfix">
+    <a href="{{photo.url}}">
+      <header class="photo-info">
+        <div class="photo-content">
+          <h2 class="photo-title">{{photo.title}}</h2>
+          <p class="photo-subtitle">{{photo.subtitle}}</p>
+        </div>
+      </header>
+      <img src="{{photo.thumbnail-img}}" alt="">
+    </a>
   </article>
   {% endfor %}
 </section>

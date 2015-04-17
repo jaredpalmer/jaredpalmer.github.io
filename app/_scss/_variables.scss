@@ -2,8 +2,8 @@ $sans: 'myriad-pro', 'Myriad Pro', 'freight-sans-pro', 'Helvetica Neue', Helveti
 $serif: 'Droid Serif', 'Georgia';
 $fontDefault: $sans;
 $fontHeadings: $sans;
-$headingWeight: 300;
-$headingColor: #222;
+$headingsWeight: 300;
+$headingsColor: #000;
 $fontBase: 110%;
 $rem-base: 16px !default;
 
@@ -16,9 +16,10 @@ $colorOffWhite: #f9f9f9;
 $colorBlue: #28affa;
 
 
-$colorBody: #555;
+$bodyColor: #555;
 $colorText: #555;
-$colorLink: #5694f1;
+$linkColor: #5694f1;
+$hrColor: $colorGray--lightest;
 
 $small: rem-calc(600);
 $medium: rem-calc(960);
@@ -28,3 +29,7 @@ $blue: #5694f1;
 $green: #7ddc16;
 $purple: #9178e2;
 $cyan: #2dd7aa;
+
+
+$bqBorderColor: $colorGray--light;
+$bqTextColor: $colorGray--light;

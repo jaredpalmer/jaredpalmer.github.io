@@ -4,5 +4,13 @@
 @import 'typography';
 @import 'layout';
 
+@import 'components/blockquote';
+@import 'components/lists';
+@import 'components/photoset';
+
 @import 'modules/post-list';
+@import 'modules/photo-list';
 @import 'modules/navbar';
+
+@import 'pages/post';
+@import 'pages/photo';
