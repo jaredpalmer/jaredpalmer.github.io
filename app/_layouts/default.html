@@ -60,9 +60,13 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+    <script src="//use.typekit.net/pkj5xuj.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
 
     <!-- build:css({app,.tmp}) /css/main.css -->
     <link rel="stylesheet" href="/_bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="/_bower_components/photoswipe/dist/photoswipe.css">
+    <link rel="stylesheet" href="/_bower_components/photoswipe/dist/default-skin/default-skin.css">
     <link rel="stylesheet" href="/css/main.css">
     <!-- endbuild -->
 
@@ -77,10 +81,12 @@
     <!--[if lt IE 8]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    {% include header.html %}
-    <div class="content">
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+
+    {% include navbar.html %}
     {{ content }}
-    </div>
     {% include scripts.html %}
     {% include googleanalytics.html %}
 

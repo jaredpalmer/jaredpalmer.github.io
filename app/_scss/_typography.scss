@@ -1,61 +1,135 @@
 
 
-html {
-  font-size: 103%;
-}
+// html {
+//   font-size: 112%;
+// }
 
+// body {
+//   color: $colorBody;
+//   font-family: $fontDefault;
+//   font-size: $fontBase;
+//   font-weight: 400;
+//   line-height: 1.45;
+// }
+//
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   color: $headingColor;
+//   //  text-transform: uppercase;
+//   font-family: $fontHeadings;
+//   letter-spacing: -.02em;
+//   line-height: 1.2;
+//   margin: 1.414em 0 .5em;
+// }
+//
+// h1,
+// h2 {
+//   font-weight: 300;
+// }
+//
+// h3,
+// h4,
+// h5,
+// h6 {
+//   font-weight: 400;
+// }
+//
+// p,
+// ol,
+// ul,
+// li,
+// blockquote {
+//   margin-bottom: 1.6rem;
+//   line-height:1.6;
+// }
+//
+// h1 {
+//   font-size: 2.074em;
+// }
+//
+// h2 {
+//   font-size: 1.728em;
+// }
+//
+// h3 {
+//   font-size: 1.44em;
+// }
+//
+// h4 {
+//   font-size: 1.2em;
+// }
+h1,
+h2 {
+  font-weight: 300;
+  color: #000;
+}
 body {
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  margin: 0 auto;
   color: $colorBody;
   font-family: $fontDefault;
-  font-size: $fontBase;
-  line-height: 1.45;
+}
+h1 {
+  font-size: 3.8125rem;
+  line-height: 5.0625rem;
+  margin-top: 3.375rem;
+  margin-bottom: 1.6875rem;
+}
+h2 {
+  font-size: 2.5625rem;
+  line-height: 3.375rem;
+  margin-top: 3.375rem;
+  margin-bottom: 1.6875rem;
+}
+h3 {
+  font-size: 1.6875rem;
+  line-height: 1.6875rem;
+  margin-top: 1.6875rem;
+  margin-bottom: 1.6875rem;
   font-weight: 400;
 }
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $headingColor;
-  //  text-transform: uppercase;
-  font-family: $fontHeadings;
-  font-weight: $headingWeight;
-  letter-spacing: -.02em;
-  line-height: 1.2;
-  margin: 1.414em 0 .5em;
-}
-
-p,
-ol,
-ul,
-li,
-blockquote {
-  margin-bottom: 1.6rem;
-  line-height:1.6;
-}
-
-h1 {
-  font-size: 2.074em;
-}
-
-h2 {
-  font-size: 1.728em;
-}
-
-h3 {
-  font-size: 1.44em;
-}
-
 h4 {
-  font-size: 1.2em;
+  font-size: 1.125rem;
+  line-height: 1.6875rem;
+  margin-top: 1.6875rem;
+  margin-bottom: 1.6875rem;
+}
+p, ul, ol, pre, table, blockquote {
+  margin-top: 1.6875rem;
+  margin-bottom: 1.6875rem;
+}
+
+/* Sanitation */
+hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+b, strong, em, small, code {
+  line-height: 1;
+}
+sup, sub {
+  vertical-align: baseline;
+  position: relative;
+  top: -0.4em;
+}
+sub {
+  top: 0.4em;
 }
 
 a {
   color: $colorLink;
   text-decoration: none;
   transition: opacity .25s ease;
+
   &:hover {
     opacity: .8;
   }
@@ -123,9 +197,20 @@ p > code {
 	}
 }
 
-.meta{
-  color: #bbb;
-  text-transform: uppercase;
-  letter-spacing: .1em;
+.meta {
+  color: $colorGray--lighter;
   font-family: $sans;
+  letter-spacing: .1em;
+  margin-bottom: .5rem;
+  text-transform: uppercase;
+
+  &--post {
+    color: $blue;
+  }
+}
+
+
+.post-title {
+  margin-bottom: 2rem;
+  margin-top: 0;
 }

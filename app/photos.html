@@ -1,0 +1,21 @@
+---
+layout: default
+title: Photos
+---
+
+<section class="photos photos-list">
+  <h1>Photos</h1>
+  {% for photo in site.photos %}
+  <article class="photo-item clearfix">
+    <a href="{{photo.url}}">
+      <header class="photo-info">
+        <div class="photo-content">
+          <h2>{{photo.title}}</h2>
+
+        </div>
+      </header>
+      <img src="{{photo.thumbnail-img}}" alt="">
+    </a>
+  </article>
+  {% endfor %}
+</section>

@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to switch accounts on Instagram (concept)"
+title:  "Account switching on Instagram (concept)"
 subtitle: "Framer.js Prototype"
 image: "/img/Instagram-hand.jpg"
 image-alt: "Instagram account switching"

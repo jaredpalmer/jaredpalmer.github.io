@@ -3,7 +3,7 @@
 # 2. config.build.yml
 # 3. config.yml
 
-name: palmdeezy.github.io
+name: http://localhost:3000
 description:
 author:
   name: Jared Palmer
@@ -19,9 +19,9 @@ include: ['.htaccess']
 future: true
 show_drafts: true
 
-permalink: pretty
+permalink: /:title
 paginate: 5
-paginate_path: 'page:num'
+paginate_path: '/page:num'
 
 # Markdown library
 markdown: kramdown
@@ -38,4 +38,9 @@ markdown: kramdown
 #     coderay_bold_every: 10
 #     coderay_css: style
 
-pygments: true
+highlighter: pygments
+
+
+collections:
+  photos:
+    output: true

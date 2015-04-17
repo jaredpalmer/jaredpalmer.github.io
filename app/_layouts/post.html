@@ -1,7 +1,8 @@
 ---
 layout: default
 ---
-<article class="post">
+<article class="post container">
+
   {% if page.video != "" %}
 
   <div id="video" class="youtube" data-src="{{page.video}}">
@@ -9,11 +10,11 @@ layout: default
     <div class="video-icon"></div>
   </div>
   {% else %}
-  <img class="u-img-responsive center-block" src="{{page.image}}" alt="{{page.title}}" >
+  <img class="" src="{{page.image}}" alt="{{page.title}}" >
   {% endif %}
-  <h1 class="text-center">{{page.title}}</h1>
-  <p class="meta text-center">{{ page.date | date: "%-d %B %Y" }}</p>
 
+<p class="meta meta--post">{{ page.date | date: "%-d %B %Y" }}</p>
+<h1 class="post-title">{{page.title}}</h1>
 <div class="post-content">
   {{ content }}
 </div>
