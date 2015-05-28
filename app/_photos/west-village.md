@@ -16,10 +16,10 @@ Although I grew up in Manhattan, I hadn't really spent too much time in the West
 
 <section class="photoset" data-layout="12" itemscope itemtype="http://schema.org/ImageGallery">
   <figure class="photoset-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <a href="../../../../img/village-cover@2x.jpgKitzbuhelPanorama.jpg" data-size="1030x318">
-      <img class="lazy" src="http://luis-almeida.github.io/unveil/img/loader.gif"  data-src="../../../../img/village-cover@2x.jpg" alt="Panorama at the top of Kitzbuhel" >
+    <a href="../../../../img/village-cover@2x.jpg" data-size="1030x318">
+      <img class="lazy" src="http://luis-almeida.github.io/unveil/img/loader.gif"  data-src="../../../../img/village-cover@2x.jpg" alt="Gay Street in Manhattan" >
     </a>
     <figcaption itemprop="caption description">Image caption  3</figcaption>
   </figure>
+</section>
 {::options parse_block_html="true" /}
-<section class="container--big">

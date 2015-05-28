@@ -3,18 +3,37 @@
   border-bottom: 1px solid $colorGray--lightest;
 }
 
-.navbar-twitter {
+.navbar-logo {
   border-bottom: 0;
   color: $colorGray--dark;
   display: block;
   float: left;
   font-family: $sans;
   font-size: 1rem;
-  font-weight:400;
+  font-weight: 400;
   height: rem-calc(50);
   line-height: rem-calc(49);
   margin-left: 1rem;
 }
+
+.navbar-twitter {
+  display: none;
+
+  @include small {
+    border-bottom: 0;
+    color: $colorGray--lighter;
+    display: block;
+    float: left;
+    font-family: $sans;
+    font-size: 1rem;
+    font-weight: 400;
+    height: rem-calc(50);
+    line-height: rem-calc(49);
+    margin-left: .5rem;
+  }
+}
+
+
 
 .navbar-menu {
   @include reset-box;

@@ -1,7 +1,7 @@
 
 .photos-list {
   margin: 0 auto;
-  max-width: rem-calc(1000);
+  // max-width: rem-calc(1000);
   width: 100%;
 
   h1 {
@@ -46,6 +46,7 @@
 
 .photo-title {
   margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
 
   @include small {
     font-size: 3rem;
@@ -57,4 +58,5 @@
   font-weight: 300;
   margin: .5rem 0 1rem;
   padding: 0;
+  color: $colorGray--lighter;
 }

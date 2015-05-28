@@ -15,9 +15,9 @@ tags:
 ---
 
 
-Shelly Palmer is the Managing Director of the Digital Media Group at Landmark Ventures. His daily technology newsletter MediaBytes has over 650,000 subscribers. His website shellypalmer.com is home to his weekly blog posts, events, and production credits. Having moved his site to Squarespace in September 2014, he was unhappy with the site's structure, events user experience, long page loads, and SEO. He also wanted to update his branding and positioning.  
+Shelly Palmer is the Managing Director of the Digital Media Group at Landmark Ventures. His daily technology newsletter MediaBytes has over 600,000 subscribers. His website shellypalmer.com is home to his weekly blog posts, events, and production credits. Having moved his site to Squarespace in September 2014, he was unhappy with the site's structure, events user experience, long page loads, and SEO. He also wanted to update his branding and positioning.  
 
 
 ##Work in progress
 
-Currently, I am in the midst of migrating the database from the pre-Squarespace site [dev.shellypalmer.com](http://dev.shellypalmer.com) to the new one. Hoping to do a full write up next week. You can check out the progress [here](http://45.55.139.41/).
+Currently, I am putting the finishing touches on the staging site [beta.shellypalmer.com](http://beta.shellypalmer.com). Hoping to do a full write up next week.

@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "name": "Jared Palmer",
+  "launch_path": "/index.html",
+  "description": "I'm a freelance designer and developer living in the West Village and working out of Landmark Ventures in midtown Manhattan.",
+  "icons": {
+    "128": "/images/touch/icon-128x128.png"
+  },
+  "developer": {
+    "name": "Jared Palmer",
+    "url": "http://jaredpalmer.com"
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "default_locale": "en",
+  "permissions": {
+  },
+  "locales": {
+    "en": {
+      "name": "Jared Palmer",
+      "description": "I'm a freelance designer and developer living in the West Village and working out of Landmark Ventures in midtown Manhattan."
+    }
+  }
+}

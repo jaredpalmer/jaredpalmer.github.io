@@ -5,7 +5,7 @@ html {
 
 body {
   color: $bodyColor;
-  font-family: 'myriad-pro', 'Myriad Set Pro', 'Lucida Grande', 'Helvetica Neue', 'Helvetica', 'Arial', 'Verdana', 'sans-serif';
+  font-family: $sans;
 }
 h1,
 h2,
@@ -34,7 +34,7 @@ h2 {
 
 h3 {
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 2px;
   line-height: 1.4545;
   text-transform: uppercase;

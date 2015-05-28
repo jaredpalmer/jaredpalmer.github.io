@@ -62,7 +62,7 @@
     <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
     <script src="//use.typekit.net/pkj5xuj.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
-
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans:300italic,400,300,600|Roboto:500,400italic,300,300italic,400' rel='stylesheet' type='text/css'>
     <!-- build:css({app,.tmp}) /css/main.css -->
     <link rel="stylesheet" href="/_bower_components/normalize-css/normalize.css">
     <link rel="stylesheet" href="/_bower_components/photoswipe/dist/photoswipe.css">
@@ -87,6 +87,7 @@
 
     {% include navbar.html %}
     {{ content }}
+    {% include footer.html %}
     {% include scripts.html %}
     {% include googleanalytics.html %}
 
