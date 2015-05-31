@@ -65,7 +65,8 @@ module.exports = function (grunt) {
               "<%= yeoman.app %>"
             ]
           },
-          watchTask: true
+          watchTask: true,
+          notify: false
         }
       },
       dist: {

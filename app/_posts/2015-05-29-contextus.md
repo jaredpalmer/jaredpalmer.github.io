@@ -14,4 +14,16 @@ tags:
  - Development
 ---
 
-Contextus is a project that tracks and ranks the most shared news stories on the Internet in near real time. At any moment, Contextus gives you a macroscopic view of the news cycle. In addition to the public [site](contextus.com), I built a second version for internal use at Landmark/ShellyPalmer. It is used every day to surface the top tech stories for the daily email newsletter, which now boasts more than 600,000 subscribers.
+
+Contextus is a project that tracks the most popular news stories on the Internet in near real time.
+
+##MediaBytes
+MediaBytes is a daily technology email newsletter that I co-author every morning with my father Shelly Palmer.  In addition to a 100-200 word blurb on current events, the email includes the most important stories in technology, media, and entertainment. We use a combination of Interspire IEM and a specialized Contextus deployment to surface the top stories each day. With over 600,000 daily subscribers, the email has become a foundational part of the Shelly Palmer brand.
+
+##Contextus.com
+Pleased with the success of MediaBytes, I decided to build a consumer-facing version-- [contextus.com](http://contextus.com). Taking inspiration from Product Hunt, Contextus’s tagline is simply “The most popular stories on the Internet, every day.” It's a lot like the old Digg.com, except that it uses websockets to update in almost real time.
+
+The iOS version will be available at the end of June. 
+
+##Project Echo
+Echo is broadcast television news production tool. Built on top of the Contextus API, Echo gives journalists, community managers, and producers a real-time dashboard of the most popular stories on the Internet.

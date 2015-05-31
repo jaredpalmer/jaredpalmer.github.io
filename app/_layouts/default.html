@@ -41,33 +41,33 @@
     <meta name="twitter:description" content="{{page.description}}">
     <meta name="twitter:image:src" content="{{site.name}}{{page.image}}">
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="img/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/icons/favicon-16x16.png">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="manifest" href="/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="img/icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-
+    <link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/ba51fa0b-0a67-4d61-ae28-d1b90a0a42ed.css"/>
     <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
-    <script src="//use.typekit.net/pkj5xuj.js"></script>
-    <script>try{Typekit.load();}catch(e){}</script>
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700|Open+Sans:300italic,400,300,600|Roboto:500,400italic,300,300italic,400' rel='stylesheet' type='text/css'>
     <!-- build:css({app,.tmp}) /css/main.css -->
     <link rel="stylesheet" href="/_bower_components/normalize-css/normalize.css">
-    <link rel="stylesheet" href="/_bower_components/photoswipe/dist/photoswipe.css">
+   <link rel="stylesheet" href="/_bower_components/photoswipe/dist/photoswipe.css">
     <link rel="stylesheet" href="/_bower_components/photoswipe/dist/default-skin/default-skin.css">
-    <link rel="stylesheet" href="/css/main.css">
+
+     <link rel="stylesheet" href="/css/main.css">
     <!-- endbuild -->
 
 
@@ -84,10 +84,13 @@
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
     <![endif]-->
+    <div id="main" class="m-scene">
 
     {% include navbar.html %}
+    <div id="content">
     {{ content }}
-    {% include footer.html %}
+    </div>
+    </div>
     {% include scripts.html %}
     {% include googleanalytics.html %}
 
