@@ -20,4 +20,4 @@ Shelly Palmer is the Managing Director of the Digital Media Group at Landmark Ve
 
 ##Work in progress
 
-Currently, I am putting the finishing touches on the staging site [beta.shellypalmer.com](http://beta.shellypalmer.com). Hoping to do a full write up next week.
+Currently, I am putting the finishing touches on the staging site [beta.shellypalmer.com](http://beta.shellypalmer.com/library). Hoping to do a full write up next week.
