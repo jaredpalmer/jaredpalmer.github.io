@@ -91,6 +91,13 @@
 
     prefix = "-webkit-";
 
+    $window = $(window);
+    $body = $('body');
+    windowHeight = $window.height();
+    windowWidth = $window.width();
+    bodyHeight = $("#content")
+      .height();
+
     animateCntx = function () {
       window.requestAnimationFrame(function () {
         $canvas = $("#cntx-canvas");
@@ -109,12 +116,7 @@
       });
     }
 
-    $window = $(window);
-    $body = $('body');
-    windowHeight = $window.height();
-    windowWidth = $window.width();
-    bodyHeight = $("#content")
-      .height();
+
 
 
     setupCanvas = function (element, animationFunction) {
