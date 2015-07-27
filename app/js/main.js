@@ -5,7 +5,7 @@
 //     // Make sure that all clicked links that link to your internal website
 //     // don't just reload the page but execute a History.pushState call
 //     $(document)
-//       .delegate('a[href^="/"],a[href^="' + siteUrl + '"]', "click", function (e) {
+//       .delegate('a[href^='/'],a[href^='' + siteUrl + '']', 'click', function (e) {
 //
 //         e.preventDefault();
 //
@@ -19,9 +19,9 @@
 //
 //       // Load the new state's URL via an Ajax Call
 //       $.get(State.url, function (data) {
-//         // Replace the "<title>" tag's content
+//         // Replace the '<title>' tag's content
 //         document.title = $(data)
-//           .find("title")
+//           .find('title')
 //           .text();
 //
 //         // Replace the content of the main container (.content)
@@ -89,30 +89,27 @@
       }
     }
 
-    prefix = "-webkit-";
+    prefix = '-webkit-';
 
     $window = $(window);
     $body = $('body');
     windowHeight = $window.height();
     windowWidth = $window.width();
-    bodyHeight = $("#content")
+    bodyHeight = $('#content')
       .height();
 
     animateCntx = function () {
       window.requestAnimationFrame(function () {
-        $canvas = $("#cntx-canvas");
+        $canvas = $('#cntx-canvas');
         scrollTop = $window.scrollTop();
-        animationValue = scrollTop - $canvas.position()
-          .top;
+        animationValue = scrollTop - $canvas.position().top;
         // console.log(animationValue);
         yVal = animationValue / 10;
         yVal = -yVal.toFixed(5);
-        transform = "translate3d(0px, " + yVal + "px, 0px)";
-        transform2 = "translate3d(0px, " + -yVal + "px, 0px)";
-        $canvas.children(".phone1")
-          .css(prefix + "transform", transform);
-        $canvas.children(".phone2")
-          .css(prefix + "transform", transform2);
+        transform = 'translate3d(0px, ' + yVal + 'px, 0px)';
+        transform2 = 'translate3d(0px, ' + -yVal + 'px, 0px)';
+        $('.phone1').css(prefix + 'transform', transform);
+        $('.phone2').css(prefix + 'transform', transform2);
       });
     }
 
@@ -131,7 +128,7 @@
     }
 
     $document.ready(function () {
-
+      setupCanvas('#cntx-canvas', animateCntx);
       $document.on('click', 'a:internal', function (event) {
         if (event.which == 2 || event.ctrlKey || event.metaKey) {
           return true;
@@ -145,10 +142,12 @@
       });
 
       $window.scroll(0);
-      setupCanvas('#cntx-canvas', animateCntx);
+      // setupCanvas('#cntx-canvas', animateCntx);
 
     });
-    $(window).load(function () {$window.scroll(0);});
+    $(window).load(function () {
+      $window.scroll(0);
+    });
     $(window)
       .on('statechange', function () {
         var
@@ -203,23 +202,23 @@
 
     })(jQuery);
 
-  // prefix = "-webkit-";
+  // prefix = '-webkit-';
   //
   // animateCntx = function () {
   //   window.requestAnimationFrame(function () {
-  //     $canvas = $("#cntx-canvas");
+  //     $canvas = $('#cntx-canvas');
   //     scrollTop = $window.scrollTop();
   //     animationValue = scrollTop - $canvas.position()
   //       .top;
   //     // console.log(animationValue);
   //     yVal = animationValue / 10;
   //     yVal = -yVal.toFixed(5);
-  //     transform = "translate3d(0px, " + yVal + "px, 0px)";
-  //     transform2 = "translate3d(0px, " + -yVal + "px, 0px)";
-  //     $canvas.children(".phone1")
-  //       .css(prefix + "transform", transform);
-  //     $canvas.children(".phone2")
-  //       .css(prefix + "transform", transform2);
+  //     transform = 'translate3d(0px, ' + yVal + 'px, 0px)';
+  //     transform2 = 'translate3d(0px, ' + -yVal + 'px, 0px)';
+  //     $canvas.children('.phone1')
+  //       .css(prefix + 'transform', transform);
+  //     $canvas.children('.phone2')
+  //       .css(prefix + 'transform', transform2);
   //   });
   // }
   //
@@ -230,7 +229,7 @@
   //   $body = $('body');
   //   windowHeight = $window.height();
   //   windowWidth = $window.width();
-  //   bodyHeight = $("#content")
+  //   bodyHeight = $('#content')
   //     .height();
   //   $window.scroll(0);
   //
