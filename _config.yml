@@ -17,9 +17,9 @@ include: ['.htaccess']
 
 # _config.build.yml sets future and show_drafts to false on `grunt build`
 future: true
-show_drafts: true
+show_drafts: false
 
-permalink: /:title
+permalink: /:title.html
 paginate: 5
 paginate_path: '/page:num'
 
@@ -43,4 +43,6 @@ highlighter: pygments
 
 collections:
   photos:
+    output: true
+  designs:
     output: true
