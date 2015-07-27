@@ -115,7 +115,7 @@
     windowWidth = $window.width();
     bodyHeight = $("#content")
       .height();
-    $window.scroll(0);
+
 
     setupCanvas = function (element, animationFunction) {
       $(element)
@@ -142,7 +142,7 @@
         return false;
       });
 
-
+      $window.scroll(0);
       setupCanvas('#cntx-canvas', animateCntx);
 
     });
