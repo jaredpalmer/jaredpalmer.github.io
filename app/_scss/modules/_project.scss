@@ -70,7 +70,7 @@ h2,
   }
 
 @include large {
-    height: 1200px;
+    height: 1300px;
   }
 }
 
@@ -112,7 +112,7 @@ position: relative;
     width: 250px;
     height: 740px;
     background-size: 75% 75%;
-    background: url("/img/contextus_left.jpg") center 170px no-repeat;
+    background: url("/img/contextus_left.jpg") center 140px no-repeat;
     @include image-2x("/img/contextus_left@2x.jpg", 75%, 75%);
     left: 18%;
   }
@@ -122,7 +122,7 @@ position: relative;
     height: 1300px;
     left: 18%;
     background-size: 298px 882px;
-      background: url("/img/contextus_left_large.jpg") center 170px no-repeat;
+      background: url("/img/contextus_left_large.jpg") center 140px no-repeat;
     @include image-2x("/img/contextus_left_large@2x.jpg", 298px, 882px);
   }
 }
@@ -149,7 +149,7 @@ position: relative;
     width: 250px;
     height: 740px;
     background-size: 75% 75%;
-    background: url("/img/contextus_right.jpg") center 170px no-repeat;
+    background: url("/img/contextus_right.jpg") center 140px no-repeat;
     @include image-2x("/img/contextus_right@2x.jpg", 75%, 75%);
     right: 18%;
   }
@@ -160,7 +160,7 @@ position: relative;
     height: 1300px;
     right: 18%;
     background-size: 298px 882px;
-    background: url("/img/contextus_right_large.jpg") center 170px no-repeat;
+    background: url("/img/contextus_right_large.jpg") center 140px no-repeat;
     @include image-2x("/img/contextus_right_large@2x.jpg", 298px, 882px);
   }
 }
