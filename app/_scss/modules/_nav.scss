@@ -5,7 +5,7 @@
   height: 50px;
   line-height: 49px;
   padding: 0 1rem;
-  max-width: 600px;
+  max-width: 960px;
 
   margin: 0 auto;
   // @include medium {
@@ -59,8 +59,8 @@
   transition: all 0.4s ease-in-out;
 
   li {
-    // display: inline;
-    margin-right: 0;
+    display: inline;
+    margin-right: 1rem;
     padding: 0;
 
     a {
