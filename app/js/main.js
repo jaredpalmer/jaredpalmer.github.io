@@ -1,52 +1,4 @@
-// jQuery(document)
-//   .ready(function ($) {
-//     var siteUrl = 'http://' + (document.location.hostname || document.location.host);
-//
-//     // Make sure that all clicked links that link to your internal website
-//     // don't just reload the page but execute a History.pushState call
-//     $(document)
-//       .delegate('a[href^='/'],a[href^='' + siteUrl + '']', 'click', function (e) {
-//
-//         e.preventDefault();
-//
-//         History.pushState(null, null, this.pathname);
-//       });
-//
-//     // Catch all History stateChange events
-//     History.Adapter.bind(window, 'statechange', function () {
-//       var State = History.getState();
-//
-//
-//       // Load the new state's URL via an Ajax Call
-//       $.get(State.url, function (data) {
-//         // Replace the '<title>' tag's content
-//         document.title = $(data)
-//           .find('title')
-//           .text();
-//
-//         // Replace the content of the main container (.content)
-//         // If you're using another div, you should change the selector
-//         $('body').animate({scrollTop: 0}, 400)
-//         $('.content')
-//           .velocity('transition.slideDownOut', {
-//             duration: 600
-//           })
-//           .promise()
-//           .done(function () {
-//             $('.content')
-//               .html($(data)
-//                 .find('.content'));
-//             $('.content').velocity('transition.slideUpIn', { stagger: 100, duration: 400, drag: true });
-//           });
-//       });
-//       // If you're using Google analytics, make sure the pageview is registered!
-//       // ga('send', 'pageview', {
-//       //     'page': State.url,
-//       //     'title': document.title
-//       // });
-//     });
-//   });
-(function ($) {
+;(function ($) {
     var $document = $(document);
 
     if (!History.enabled) {
@@ -143,7 +95,7 @@
 
       $window.scroll(0);
       // setupCanvas('#cntx-canvas', animateCntx);
-
+      $('.lazy').unveil();
     });
     $(window).load(function () {
       $window.scroll(0);
@@ -182,11 +134,12 @@
               .promise()
               .done(function () {
                 setupCanvas('#cntx-canvas', animateCntx);
+
                 $content
                   .velocity('transition.slideUpIn', {
                     duration: 300
                   })
-                  .html(response.$content)
+                  .html(response.$content);
               });
           })
           .fail(function () {
