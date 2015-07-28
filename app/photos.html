@@ -1,0 +1,26 @@
+---
+layout: default
+title: Photos
+description: Photos by Jared Palmer
+---
+
+<div class="photos container">
+  <!-- {% for photo in photos %}
+    <article class="photo-item clearfix">
+      <a href="{{photo.url}}">
+        {{photo.title}}
+      </a>
+    </article>
+    {% endfor %} -->
+
+    {% for photo in site.photos %}
+      <a class="photo-item" href="{{photo.url}}" style="background-image: url({{photo.thumbnail-img}});">
+        <div class="photo-item-info">
+          <h2>{{photo.title}}</h2>
+          <p>{{photo.subtitle}}</p>
+        </div>
+      </a>
+    {% endfor %}
+
+
+</div>
