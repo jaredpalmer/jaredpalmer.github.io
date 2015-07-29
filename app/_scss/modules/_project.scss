@@ -114,7 +114,7 @@ position: relative;
 
   @include medium {
     width: 250px;
-    height: 740px;
+    height: 750px;
     background-size: 75% 75%;
     background: url("/img/contextus_left.jpg") center 100px no-repeat;
     @include image-2x("/img/contextus_left@2x.jpg", 75%, 75%);
@@ -151,7 +151,7 @@ position: relative;
 
   @include medium {
     width: 250px;
-    height: 740px;
+    height: 750px;
     background-size: 75% 75%;
     background: url("/img/contextus_right.jpg") center 100px no-repeat;
     @include image-2x("/img/contextus_right@2x.jpg", 75%, 75%);
