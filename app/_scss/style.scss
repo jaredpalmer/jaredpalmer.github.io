@@ -9,3 +9,14 @@
 @import 'modules/project';
 @import 'modules/photo-list';
 @import 'modules/photo';
+@import 'modules/photoset';
+
+// .photo-info {
+//   opacity: 0;
+//   background: 0;
+//   transition: all .3s ease-in;
+// }
+.lazy {
+  opacity: 0;
+  transition: opacity .3s ease-in;
+}

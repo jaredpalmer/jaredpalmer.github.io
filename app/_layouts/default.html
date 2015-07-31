@@ -82,12 +82,11 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
     <![endif]-->
     {% include navbar.html %}
-    <main id="main">
-      <div id="content">
-              {{ content }}
-      </div>
+    <main id="content">
+          {{ content }}
+          {% include footer.html %}
     </main>
-    {% include footer.html %}
+
     {% include scripts.html %}
     {% include googleanalytics.html %}
   </body>
