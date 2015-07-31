@@ -156,10 +156,11 @@
 
         var url = History.getState().url;
         var rel = url.replace(root, '/');
+        console.log(rel);
         $.get(rel)
           .done(function (date) {
             var response = parse_response(date);
-            console.log(response.$content);
+            // console.log(response.$content);
             if (!response.$content.length) {
               document.location.href = url;
 
@@ -176,19 +177,30 @@
             var $nav = $('.navbar');
             var page = strip(rel);
             $body.scrollTop(0);
+            if (rel !== '/photos/austria' || rel !== '/photos/austria/' || rel !== '/photos/austria.html' ) {
+              console.log('execute');
+              $('.navbar .navbar-logo').css({color: "#000000"});
+              // $('.navbar .navbar-logo span').velocity({color: "#b7b7b7"}, {duration: 300});
+            }
+
             $content
               .velocity('transition.slideDownOut', {
                 duration: 400
               }).promise()
               .done(function () {
 
-                $content
-                  .velocity('transition.slideUpIn', {
-                    duration: 300
-                  })
-                  .html(response.$content);
-                  initPhotoSwipeFromDOM('.gallery');
+                  $content
+                    .velocity('transition.slideUpIn', {
+                      duration: 300
+                    })
+                    .html(response.$content);
+
+                initPhotoSwipeFromDOM('.gallery');
                 rerun();
+                if (rel !== '/photos/austria' || rel !== '/photos/austria/' || rel !== '/photos/austria.html' ) {
+                  // $('.navbar a').velocity({color: "#ffffff" }, {duration: 300});
+
+                }
 
                 setupCanvas('#cntx-canvas', animateCntx);
 
@@ -219,6 +231,11 @@
       setupCanvas('#cntx-canvas', animateCntx);
 
       initPhotoSwipeFromDOM('.gallery');
+
+      $('.share').on('click', function(e) {
+        e.preventDefault();
+        window.open($(this).attr('href'), "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=500, left=500, width=400, height=400");
+      });
       // initPhotoSwipeFromDOM('.gallery2');
       // $('.lazy').unveil(500);
 

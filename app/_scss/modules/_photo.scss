@@ -1,17 +1,16 @@
 .photo {
-  margin: 4rem auto;
-  max-width: 960px;
+  margin: 0 auto;
   section {
     margin: 2rem auto;
     padding: 0 1rem;
     max-width: 600px;
     h1 {
-      margin-bottom: .5rem;
-      transition: all .25s ease-in;
+      margin-bottom: 0.5rem;
+      transition: all 0.25s ease-in;
     }
     p:last {
       margin-bottom: 0;
-      transition: all .25s ease-in;
+      transition: all 0.25s ease-in;
     }
     &.intro {
       @include small {
@@ -19,11 +18,33 @@
       }
     }
   }
-  // img {
-  //   width: 100%;
-  //   max-width: 960px;
-  //   // @include medium {
-  //   //   padding: 0 1rem;
-  //   // }
-  // }
+  .superhero {
+    width: 100%;
+    margin: -50px auto;
+    padding: 7.125rem 0 50px;
+    text-align: center;
+    background: linear-gradient(90deg, #002172 0%, #01176C 25%, #000F65 50%, #021363 90%);
+    h1 {
+      color: #fff;
+    }
+    &-img {
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+  &-footer {
+    margin: 4rem auto;
+    text-align: center;
+    a{
+      color: #666;
+      padding: 1rem;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+    }
+  }
+  .back-button {
+    position:relative;
+    top: 0;
+    left: 0;
+  }
 }

@@ -11,7 +11,11 @@
   // @include medium {
   //   padding: 0;
   // }
-
+  &-white {
+    a {
+      color: #fff;
+    }
+  }
 }
 
 
@@ -26,6 +30,9 @@
     color: #b7b7b7;
     margin-top: -10px;
   }
+}
+.navbar-white .navbar-logo span {
+  color: #ccc;
 }
 
 

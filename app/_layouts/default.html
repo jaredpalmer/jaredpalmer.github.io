@@ -83,7 +83,8 @@
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
     <![endif]-->
-    {% include navbar.html %}
+    {% assign n = page.navClass %}
+    {% include navbar.html navClass=n %}
     <main id="content">
           {{ content }}
 
