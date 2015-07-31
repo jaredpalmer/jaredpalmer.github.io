@@ -3,11 +3,11 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Jared Palmer -- Designer + Developer -- @jaredpalmer
 
 # THANKS
 
-    <name>
+    Velocity.js
 
 # TECHNOLOGY COLOPHON
 
