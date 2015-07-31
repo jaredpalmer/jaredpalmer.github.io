@@ -47,6 +47,7 @@
 	-webkit-transform: translateY(100%);
 	transform: translateY(100%);
 	transition: all .25s ease-in-out;
+  display: none !important;
 }
 .photoset-item a {
   background-position: center center;
