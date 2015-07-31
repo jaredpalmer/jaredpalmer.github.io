@@ -64,6 +64,8 @@
 <script>try{Typekit.load();}catch(e){}</script>
     <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
     <!-- build:css({app,.tmp}) /css/main.css -->
+     <link rel="stylesheet" href="/_bower_components/photoswipe/dist/photoswipe.css">
+     <link rel="stylesheet" href="/_bower_components/photoswipe/dist/default-skin/default-skin.css">
      <link rel="stylesheet" href="/css/style.css">
     <!-- endbuild -->
 
@@ -84,9 +86,9 @@
     {% include navbar.html %}
     <main id="content">
           {{ content }}
-          {% include footer.html %}
-    </main>
 
+    </main>
+    {% include footer.html %}
     {% include scripts.html %}
     {% include googleanalytics.html %}
   </body>

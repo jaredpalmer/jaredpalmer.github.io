@@ -184,8 +184,9 @@
                     duration: 300
                   })
                   .html(response.$content);
-
+                  initPhotoSwipeFromDOM('.gallery');
                 rerun();
+
                 setupCanvas('#cntx-canvas', animateCntx);
 
               });
@@ -213,6 +214,9 @@
       });
       rerun();
       setupCanvas('#cntx-canvas', animateCntx);
+
+      initPhotoSwipeFromDOM('.gallery');
+      // initPhotoSwipeFromDOM('.gallery2');
       // $('.lazy').unveil(500);
 
     });
