@@ -17,9 +17,11 @@
 
           // Generate array containing all image aspect ratios
           var ratios = $pi.map(function () {
-              return $(this)
-                .find('img')
-                .data('ratio');
+              var size = $(this).find('a').data('size').split('x');
+              return (parseInt(size[0], 10) / parseInt(size[1], 10));
+              // return $(this)
+              //   .find('img')
+              //   .data('ratio');
             })
             .get();
 
@@ -58,6 +60,7 @@
             return this.style.opacity = 1;
           })
         })
+        // $(".lazy-delay").velocity('fadeIn', {duration: 300})
     };
 
     if (!History.enabled) {

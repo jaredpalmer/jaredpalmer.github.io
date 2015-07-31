@@ -8,15 +8,15 @@ description: Photos by Jared Palmer
   <h1 class="title">Photos</h1>
   {% assign photos = site.photos | sort: 'date' %}
   {% for photo in photos reversed  %}
-  <article class="photo-item">
+  <article class="photo-item ">
     <a href="{{photo.url}}">
-      <header class="photo-info lazy">
+      <header class="photo-info">
         <div class="photo-content">
           <h2 class="photo-title">{{photo.title}}</h2>
           <p class="photo-subtitle">{{photo.subtitle}}</p>
         </div>
       </header>
-      <img class="lazy" src="http://turbo.paulstamatiou.com/assets/gray-squircles-loader.gif" data-src="{{photo.thumbnail-img}}" alt="{{photo.title}}">
+      <img src="{{photo.thumbnail-img}}" alt="{{photo.title}}">
     </a>
   </article>
   {% endfor %}

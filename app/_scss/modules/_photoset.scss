@@ -3,6 +3,9 @@
 	overflow: hidden;
 	width: 100%;
   max-width: 960px;
+  @include medium {
+    padding: 0 1rem;
+  }
 }
 .photoset .photoset-row {
   display: block;
@@ -43,7 +46,7 @@
 	width: 100%;
 	-webkit-transform: translateY(100%);
 	transform: translateY(100%);
-	transition: all .5s ease-in-out;
+	transition: all .25s ease-in-out;
 }
 .photoset-item a {
   background-position: center center;
@@ -55,8 +58,8 @@
   height: 100%;
 }
 .photoset .photoset-item:hover a + figcaption {
-	-webkit-transform: translateY(0);
-	transform: translateY(0);
+	// -webkit-transform: translateY(0);
+	// transform: translateY(0);
 }
 .photoset img {
 	display: block;
