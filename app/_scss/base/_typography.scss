@@ -12,7 +12,9 @@ html,
 body {
   height: 100%;
 }
-
+html {
+  font-size: 18px;
+}
 
 body {
   font: 18px/1.5  'aktiv-grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -34,7 +36,7 @@ h5,
 ul,
 p,
 pre {
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 li {

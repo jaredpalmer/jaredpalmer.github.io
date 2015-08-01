@@ -177,35 +177,42 @@
             var $nav = $('.navbar');
             var page = strip(rel);
             $body.scrollTop(0);
-            if (rel !== '/photos/austria' || rel !== '/photos/austria/' || rel !== '/photos/austria.html' ) {
+            if (rel === '/photos/austria' || rel === '/photos/austria/' || rel === '/photos/austria.html' ) {
               console.log('execute');
-              $('.navbar .navbar-logo').css({color: "#000000"});
-              // $('.navbar .navbar-logo span').velocity({color: "#b7b7b7"}, {duration: 300});
+
+              $content
+                .velocity('transition.slideDownOut', {
+                  duration: 250
+                }).promise()
+                .done(function () {
+                    $content
+                      .velocity('transition.slideUpIn', {
+                        duration: 250
+                      })
+                      .html(response.$content);
+                  initPhotoSwipeFromDOM('.gallery');
+                  rerun();
+                  setupCanvas('#cntx-canvas', animateCntx);
+                });
             }
 
-            $content
-              .velocity('transition.slideDownOut', {
-                duration: 400
-              }).promise()
-              .done(function () {
-
-                  $content
-                    .velocity('transition.slideUpIn', {
-                      duration: 300
-                    })
-                    .html(response.$content);
-
-                initPhotoSwipeFromDOM('.gallery');
-                rerun();
-                if (rel !== '/photos/austria' || rel !== '/photos/austria/' || rel !== '/photos/austria.html' ) {
-                  // $('.navbar a').velocity({color: "#ffffff" }, {duration: 300});
-
-                }
-
-                setupCanvas('#cntx-canvas', animateCntx);
-
-              });
-
+            else {
+              $('.navbar .navbar-logo').css({color: "#000000"});
+              $content
+                .velocity('transition.slideDownOut', {
+                  duration: 250
+                }).promise()
+                .done(function () {
+                    $content
+                      .velocity('transition.slideUpIn', {
+                        duration: 250
+                      })
+                      .html(response.$content);
+                  initPhotoSwipeFromDOM('.gallery');
+                  rerun();
+                  setupCanvas('#cntx-canvas', animateCntx);
+                });
+            }
           })
           .fail(function () {
             document.location.href = url;

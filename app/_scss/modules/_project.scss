@@ -84,11 +84,11 @@ h2,
     height: 900px;
   }
 
-@include large {
+  @include large {
     height: 1300px;
   }
 
-position: relative;
+  position: relative;
   max-width: 1000px;
   margin: auto;
 }
@@ -167,6 +167,10 @@ position: relative;
     background: url("/img/contextus_right_large.jpg") center 100px no-repeat;
     @include image-2x("/img/contextus_right_large@2x.jpg", 298px, 882px);
   }
+}
+
+.about {
+  text-align: center;
 }
 
 
