@@ -4,6 +4,9 @@
     margin: 2rem auto;
     padding: 0 1rem;
     max-width: 600px;
+    &.hero {
+      margin: 4rem auto 2rem;
+    }
     h1 {
       margin-bottom: 0.5rem;
       transition: all 0.25s ease-in;
@@ -18,11 +21,7 @@
       }
     }
   }
-  .hero {
-    text-align: center;
-    margin: 4rem auto;
-    width: 100%;
-  }
+
   .superhero {
     width: 100%;
     margin: -50px auto;
@@ -51,5 +50,14 @@
     position:relative;
     top: 0;
     left: 0;
+  }
+}
+
+.hero {
+  text-align: center;
+  margin: 4rem auto 2rem;
+  width: 100%;
+  h1, p{
+    text-align: center;
   }
 }

@@ -4,8 +4,13 @@ title: Photos
 description: Photos by Jared Palmer
 ---
 
+
+
 <div class="photos photos-list" >
-  <h1 class="title">Photos</h1>
+  <section class="hero">
+    <h1>Photos</h1>
+    <p>Adventures from around the world</p>
+  </section>
   {% assign photos = site.photos | sort: 'date' %}
   {% for photo in photos reversed  %}
   <article class="photo-item ">
