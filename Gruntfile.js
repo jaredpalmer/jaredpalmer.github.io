@@ -21,9 +21,12 @@ module.exports = function (grunt) {
       dist: 'dist'
     },
     watch: {
+      options: {
+       spawn: false // Important, don't remove this!
+      },
       sass: {
-        files: ['<%= yeoman.app %>/_scss/**/*.{scss,sass}'],
-        tasks: ['sass:server', 'autoprefixer:dist']
+        files: ['<%= yeoman.app %>/_scss/**/*'],
+        tasks: ['sass:server', 'autoprefixer:dist', 'bsReload:css']
       },
       autoprefixer: {
         files: ['<%= yeoman.app %>/css/**/*.css'],
@@ -88,6 +91,14 @@ module.exports = function (grunt) {
         }
       }
     },
+    bsReload: {
+            css: {
+                reload: "style.css"
+            },
+            all: {
+                reload: true
+            }
+        },
     clean: {
       dist: {
         files: [{

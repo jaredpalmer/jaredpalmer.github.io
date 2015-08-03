@@ -1,0 +1,10 @@
+{
+  "preset": "airbnb",
+  "disallowSpacesInAnonymousFunctionExpression" : null,
+  "validateLineBreaks": "LF",
+  "validateIndentation": 2,
+  "excludeFiles": ["node_modules/**", "gruntfile.js"],
+  "maximumLineLength": 130,
+  "requireCamelCaseOrUpperCaseIdentifiers": true,
+  "validateQuoteMarks": "'"
+}
