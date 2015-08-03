@@ -1,11 +1,10 @@
-// Generated on 2015-04-13 using generator-jekyllrb 1.4.1
+// Generated on 2015-08-03 using generator-jekyllrb 1.4.1
 'use strict';
 
 // Directory reference:
 //   css: css
 //   sass: _scss
 //   javascript: js
-//   coffeescript: _src
 //   images: img
 //   fonts: fonts
 
@@ -29,14 +28,6 @@ module.exports = function (grunt) {
       autoprefixer: {
         files: ['<%= yeoman.app %>/css/**/*.css'],
         tasks: ['copy:stageCss', 'autoprefixer:dist']
-      },
-      coffee: {
-        files: ['<%= yeoman.app %>/_src/**/*.coffee'],
-        tasks: ['coffee:dist']
-      },
-      coffeeTest: {
-        files: ['test/spec/**/*.coffee'],
-        tasks: ['coffee:test']
       },
       jekyll: {
         files: [
@@ -65,8 +56,7 @@ module.exports = function (grunt) {
               "<%= yeoman.app %>"
             ]
           },
-          watchTask: true,
-          notify: false
+          watchTask: true
         }
       },
       dist: {
@@ -154,26 +144,6 @@ module.exports = function (grunt) {
         cwd: '.tmp',
         src: '**/{css,concat}/*.css',
         dest: '.tmp'
-      }
-    },
-    coffee: {
-      dist: {
-        files: [{
-          expand: true,
-          cwd: '<%= yeoman.app %>/_src',
-          src: '**/*.coffee',
-          dest: '.tmp/js',
-          ext: '.js'
-        }]
-      },
-      test: {
-        files: [{
-          expand: true,
-          cwd: 'test/spec',
-          src: '**/*.coffee',
-          dest: '.tmp/spec',
-          ext: '.js'
-        }]
       }
     },
     jekyll: {
@@ -320,14 +290,6 @@ module.exports = function (grunt) {
         }
       }
     },
-    coffeelint: {
-      options: {
-        'max_line_length': {
-          'level': 'ignore'
-        }
-      },
-      check: ['<%= yeoman.app %>/_src/*.coffee']
-    },
     jshint: {
       options: {
         jshintrc: '.jshintrc',
@@ -359,13 +321,11 @@ module.exports = function (grunt) {
     concurrent: {
       server: [
         'sass:server',
-        'coffee:dist',
         'copy:stageCss',
         'jekyll:server'
       ],
       dist: [
         'sass:dist',
-        'coffee:dist',
         'copy:dist'
       ]
     }
@@ -402,9 +362,7 @@ module.exports = function (grunt) {
     'clean:server',
     'jekyll:check',
     'sass:server',
-    'coffeelint:check',
-    'coffee:dist',
-    // 'jshint:all',
+    'jshint:all',
     'csslint:check'
     // 'scsslint'
   ]);
@@ -421,7 +379,7 @@ module.exports = function (grunt) {
     'uglify',
     'imagemin',
     'svgmin',
-    // 'filerev',
+    'filerev',
     'usemin',
     'htmlmin'
     ]);

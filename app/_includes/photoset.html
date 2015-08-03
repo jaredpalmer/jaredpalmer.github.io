@@ -1,7 +1,0 @@
-<div class="photoset-grid" data-layout="{{include.layout}}" style="visibility:none;">
-		{% assign photos = include.array | split: ' ' %}
-		{% assign alttext = include.alts | split: '|' %}
-		{% for photo in photos %}
-			<img src="{{ photo }}" data-highres="" alt="{{ alttext[forloop.index0] }}">
-		{% endfor %}
-</div>
