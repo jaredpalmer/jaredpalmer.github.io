@@ -65,7 +65,8 @@ module.exports = function (grunt) {
               "<%= yeoman.app %>"
             ]
           },
-          watchTask: true
+          watchTask: true,
+          notify: false
         }
       },
       dist: {
@@ -403,7 +404,7 @@ module.exports = function (grunt) {
     'sass:server',
     'coffeelint:check',
     'coffee:dist',
-    'jshint:all',
+    // 'jshint:all',
     'csslint:check'
     // 'scsslint'
   ]);
@@ -420,7 +421,7 @@ module.exports = function (grunt) {
     'uglify',
     'imagemin',
     'svgmin',
-    'filerev',
+    // 'filerev',
     'usemin',
     'htmlmin'
     ]);

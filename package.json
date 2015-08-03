@@ -1,8 +1,8 @@
 {
   "name": "palmdeezygithubio",
   "private": true,
-  "version": "0.0.0",
-  "description": "Yeoman workflow for palmdeezy.github.io",
+  "version": "0.0.1",
+  "description": "JaredPalmer Personal Website",
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.5",

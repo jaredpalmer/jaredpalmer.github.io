@@ -2,19 +2,26 @@
 layout: default
 ---
 <article class="post">
+  <header>
+    <h1>{{page.title}}</h1>
+    <p>{{ page.date | date: "%-d %B %Y" }}</p>
+  </header>
+  <section class="post-body">
   {% if page.video != "" %}
-
   <div id="video" class="youtube" data-src="{{page.video}}">
     <img class="placeholder" src="{{page.image}}" alt="{{page.title}}" >
     <div class="video-icon"></div>
   </div>
   {% else %}
-  <img class="u-img-responsive center-block" src="{{page.image}}" alt="{{page.title}}" >
+  <div class="post-img">
+      <img class="banner" src="{{page.image}}" alt="{{page.title}}" >
+  </div>
   {% endif %}
-  <h1 class="text-center">{{page.title}}</h1>
-  <p class="meta text-center">{{ page.date | date: "%-d %B %Y" }}</p>
+  <div id="post-content">
 
-<div class="post-content">
+  </div>
   {{ content }}
-</div>
+  </section>
 </article>
+
+{% include footer.html %}

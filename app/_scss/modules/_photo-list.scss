@@ -1,0 +1,68 @@
+.photos-list {
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 1rem;
+
+  h1 {
+    text-align: center;
+  }
+
+}
+
+.photo-item {
+  margin-top: 1rem;
+  position: relative;
+  line-height: 0;
+
+  img {
+    width: 100%;
+  }
+}
+
+.photo-info {
+  position: absolute;
+  bottom: 0;
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0,0,0,0)), color-stop(100%, rgba(0,0,0,0.65)));
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
+  background: -o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
+  background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.photo-content {
+  color: #fff;
+  max-width: 28em;
+  padding-left: 1rem;
+  @include medium {
+    padding-left: 2rem;
+  }
+  width: 100%;
+
+  h2 {
+    color: #fff;
+  }
+}
+
+.photo-title {
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+
+  @include medium {
+    font-size: 2.5rem;
+  }
+}
+
+.photo-subtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin: 1rem 0 2rem;
+  @include medium {
+    margin: 1.5rem 0 3rem;
+  }
+  padding: 0;
+  color: #eee;
+}
