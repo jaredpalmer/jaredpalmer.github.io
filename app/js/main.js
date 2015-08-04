@@ -31,52 +31,44 @@
 //   }
 // }, true);
 
-;(function ($) {
-    var $document = $(document);
+;(function($) {
+  var $document = $(document);
 
-    var gridset = function () {
-      return $('.photoset-row')
-        .each(function () {
-          var $pi = $(this)
-            .find('.photoset-item'),
-            cWidth = $(this)
-            .parent('.photoset')
-            .width();
+  var gridset = function() {
+    return $('.photoset-row').each(function() {
+      var $pi = $(this).find('.photoset-item');
+      var cWidth = $(this).parent('.photoset').width();
 
-          // Generate array containing all image aspect ratios
-          var ratios = $pi.map(function () {
-              var size = $(this).find('a').data('size').split('x');
-              return (parseInt(size[0], 10) / parseInt(size[1], 10));
-              // return $(this)
-              //   .find('img')
-              //   .data('ratio');
-            })
-            .get();
+      // Generate array containing all image aspect ratios
+      var ratios = $pi.map(function() {
+          var size = $(this).find('a').data('size').split('x');
+          return (parseInt(size[0], 10) / parseInt(size[1], 10));
+        }).get();
 
-          // Get sum of widths
-          var sumRatios = 0,
-            sumMargins = 0,
-            minRatio = Math.min.apply(Math, ratios);
-          for (var i = 0; i < $pi.length; i++) {
-            sumRatios += ratios[i] / minRatio;
-          }
+      // Get sum of widths
+      var sumRatios = 0;
+      var sumMargins = 0;
+      var minRatio = Math.min.apply(Math, ratios);
+      for (var i = 0; i < $pi.length; i++) {
+        sumRatios += ratios[i] / minRatio;
+      }
 
-          $pi.each(function () {
-            sumMargins += parseInt($(this)
-              .css('margin-left')) + parseInt($(this)
-              .css('margin-right'));
-          });
+      $pi.each(function() {
+        sumMargins += parseInt($(this)
+          .css('margin-left')) + parseInt($(this)
+          .css('margin-right'));
+      });
 
-          // Calculate dimensions
-          $pi.each(function (i) {
-            var minWidth = (cWidth - sumMargins) / sumRatios;
-            $(this)
-              .find('img')
-              .height(Math.ceil(minWidth / minRatio))
-              .width(Math.ceil(minWidth / minRatio) * ratios[i]);
-          });
-        });
-    };
+      // Calculate dimensions
+      $pi.each(function(i) {
+        var minWidth = (cWidth - sumMargins) / sumRatios;
+        $(this)
+          .find('img')
+          .height(Math.ceil(minWidth / minRatio))
+          .width(Math.ceil(minWidth / minRatio) * ratios[i]);
+      });
+    });
+  };
 
   var resizer = function() {
     return gridset();
@@ -101,172 +93,146 @@
     return (elem.hostname === window.location.hostname && /(\/|\.html|\b)$/i.test(elem.pathname)) || false;
   };
 
-  function find_all($html, selector) {
+  function findAll($html, selector) {
     return $html.filter(selector)
       .add($html.find(selector));
   }
 
-  function parse_html(html) {
+  function parseHTML(html) {
     return $($.parseHTML(html, document, true));
   }
 
-function strip(path) {
-  return path.substr(0, path.lastIndexOf('.')) || path;
-}
+  function strip(path) {
+    return path.substr(0, path.lastIndexOf('.')) || path;
+  }
 
-  function parse_response(html) {
-    var
-      head = /<head[^>]*>([\s\S]+)<\/head>/.exec(html),
-      body = /<body[^>]*>([\s\S]+)<\/body>/.exec(html),
+  function parseResponse(html) {
+    var head = /<head[^>]*>([\s\S]+)<\/head>/.exec(html);
+    var body = /<body[^>]*>([\s\S]+)<\/body>/.exec(html);
 
-      $head = head ? parse_html(head[1]) : $(),
-      $body = body ? parse_html(body[1]) : $(),
+    var $head = head ? parseHTML(head[1]) : $();
+    var $body = body ? parseHTML(body[1]) : $();
 
-      title = $.trim(find_all($head, 'title')
-        .last()
-        .html()),
-      $content = $.trim(find_all($body, '#content')
-        .first()
-        .html());
+    var title = $.trim(findAll($head, 'title').last().html());
+    var $content = $.trim(findAll($body, '#content').first().html());
 
     return {
-      'title': title,
-      '$content': $content
+      title: title,
+      $content: $content,
     };
   }
 
   var prefix = '-webkit-';
 
-    var $window = $(window);
-    var $body = $('body');
-    var windowHeight = $window.height();
-    var windowWidth = $window.width();
-    var bodyHeight = $('#content').height();
-    var scrollIntervalID;
-    var animateCntx = function () {
-      window.requestAnimationFrame(function () {
-        var $canvas = $('#cntx-canvas');
-        var scrollTop = $window.scrollTop();
-        var animationValue = scrollTop - $canvas.position().top;
-        // console.log(animationValue);
-        var yVal = animationValue / 10;
-        yVal = -yVal.toFixed(5);
-        var transform = 'translate3d(0px, ' + yVal + 'px, 0px)';
-        var transform2 = 'translate3d(0px, ' + -yVal + 'px, 0px)';
-        $('.phone1').css(prefix + 'transform', transform);
-        $('.phone2').css(prefix + 'transform', transform2);
-      });
-    };
+  var $window = $(window);
+  var $body = $('body');
+  var windowHeight = $window.height();
+  var windowWidth = $window.width();
+  var bodyHeight = $('#content').height();
+  var scrollIntervalID;
 
-    var setupCanvas = function (element, animationFunction) {
-      $(element)
-        .bind('inview', function (event, visible) {
-          if (visible === true) {
-            scrollIntervalID = setInterval(animationFunction, 50);
-          } else {
-            scrollIntervalID = 0;
-          }
-        });
-    };
+  var animateCntx = function() {
+    window.requestAnimationFrame(function() {
+      var $canvas = $('#cntx-canvas');
+      var scrollTop = $window.scrollTop();
+      var animationValue = scrollTop - $canvas.position().top;
 
-
-    $window.load(function () {
-      $(this).resize($.throttle(50, resizer));
+      // console.log(animationValue);
+      var yVal = animationValue / 10;
+      yVal = -yVal.toFixed(5);
+      var transform = 'translate3d(0px, ' + yVal + 'px, 0px)';
+      var transform2 = 'translate3d(0px, ' + -yVal + 'px, 0px)';
+      $('.phone1').css(prefix + 'transform', transform);
+      $('.phone2').css(prefix + 'transform', transform2);
     });
+  };
 
-    $window.on('statechange', function () {
-
-        var url = History.getState().url;
-        var rel = url.replace(root, '/');
-        console.log(rel);
-        $.get(rel)
-          .done(function (date) {
-            var response = parse_response(date);
-            // console.log(response.$content);
-            if (!response.$content.length) {
-              document.location.href = url;
-
-              return false;
-            }
-
-            if (response.title.length) {
-              $('title')
-                .last()
-                .html(response.title);
-            }
-
-            var $content = $('#content');
-            var $nav = $('.navbar');
-            var page = strip(rel);
-            $body.scrollTop(0);
-            // if (rel === '/photos/austria' || rel === '/photos/austria/' || rel === '/photos/austria.html' ) {
-            //   console.log('execute');
-            //
-            //   $content
-            //     .velocity('transition.slideDownOut', {
-            //       duration: 250
-            //     }).promise()
-            //     .done(function () {
-            //         $content
-            //           .velocity('transition.slideUpIn', {
-            //             duration: 250
-            //           })
-            //           .html(response.$content);
-            //       initPhotoSwipeFromDOM('.gallery');
-            //       rerun();
-            //       setupCanvas('#cntx-canvas', animateCntx);
-            //     });
-            // }
-
-
-              $('.navbar .navbar-logo').css({color: '#000000'});
-              $content
-                .velocity('transition.slideDownOut', {
-                  duration: 250
-                }).promise()
-                .done(function () {
-                    $content
-                      .velocity('transition.slideUpIn', {
-                        duration: 250
-                      })
-                      .html(response.$content);
-                  initPhotoSwipeFromDOM('.gallery');
-                  rerun();
-                  setupCanvas('#cntx-canvas', animateCntx);
-                });
-          })
-          .fail(function () {
-            document.location.href = url;
-
-            return false;
-          });
+  var setupCanvas = function(element, animationFunction) {
+    $(element).bind('inview', function(event, visible) {
+        if (visible === true) {
+          scrollIntervalID = setInterval(animationFunction, 50);
+        } else {
+          scrollIntervalID = 0;
+        }
       });
+  };
 
-    $document.ready(function () {
+  $window.load(function() {
+    $(this).resize($.throttle(50, resizer));
+  });
 
-      $document.on('click', 'a:internal', function (event) {
-        if (event.which === 2 || event.ctrlKey || event.metaKey) {
-          return true;
+  $window.on('statechange', function() {
+    var url = History.getState().url;
+    var rel = url.replace(root, '/');
+    console.log(rel);
+    $.get(rel).done(function(date) {
+        var response = parseResponse(date);
+
+        // console.log(response.$content);
+        if (!response.$content.length) {
+          document.location.href = url;
+
+          return false;
         }
 
-        History.pushState(null, null, $(this)
-          .attr('href'));
-        event.preventDefault();
+        if (response.title.length) {
+          $('title')
+            .last()
+            .html(response.title);
+        }
+
+        var $content = $('#content');
+        var $nav = $('.navbar');
+        var page = strip(rel);
+        $body.scrollTop(0);
+        $('.navbar .navbar-logo').css({color: '#000000'});
+        $content.velocity('transition.slideDownOut', {
+            duration: 250,
+          })
+          .promise()
+          .done(function() {
+            $content.velocity('transition.slideUpIn', {
+                duration: 250,
+              }).html(response.$content);
+            rerun();
+            initPhotoSwipeFromDOM('.gallery');
+            setupCanvas('#cntx-canvas', animateCntx);
+          });
+      })
+      .fail(function() {
+        document.location.href = url;
 
         return false;
       });
-      rerun();
-      setupCanvas('#cntx-canvas', animateCntx);
+  });
 
-      initPhotoSwipeFromDOM('.gallery');
+  $document.ready(function() {
 
-      $('.share').on('click', function(e) {
-        e.preventDefault();
-        window.open($(this).attr('href'), '_blank', 'toolbar=yes, scrollbars=yes, resizable=yes, top=500, left=500, width=400, height=400');
-      });
-      // initPhotoSwipeFromDOM('.gallery2');
-      // $('.lazy').unveil(500);
+    $document.on('click', 'a:internal', function(event) {
+      if (event.which === 2 || event.ctrlKey || event.metaKey) {
+        return true;
+      }
 
+      History.pushState(null, null, $(this)
+        .attr('href'));
+      event.preventDefault();
+
+      return false;
     });
+
+    rerun();
+    setupCanvas('#cntx-canvas', animateCntx);
+    initPhotoSwipeFromDOM('.gallery');
+
+    // $('.share').on('click', function(e) {
+    //   e.preventDefault();
+    //   window.open($(this).attr('href'), '_blank', 'toolbar=yes,
+    // scrollbars=yes, resizable=yes, top=500, left=500, width=400,
+    // height=400');
+    // });
+    // initPhotoSwipeFromDOM('.gallery2');
+    // $('.lazy').unveil(500);
+
+  });
 
 })(jQuery);
