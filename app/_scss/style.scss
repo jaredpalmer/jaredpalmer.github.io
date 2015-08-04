@@ -1,1 +1,38 @@
-@import 'base/test';
+// Import Sassline base SCSS files in order so variables are read correctly.
+@import 'base/reset';
+@import 'base/variables';
+@import 'base/typography';
+@import 'base/mixins';
+@import 'base/container';
+@import 'modules/nav';
+@import 'modules/cv';
+@import 'modules/project';
+@import 'modules/photo-list';
+@import 'modules/photo';
+@import 'modules/photoset';
+@import 'modules/footer';
+@import 'modules/snapcode';
+@import 'modules/social';
+@import 'modules/chat';
+
+// .photo-info {
+//   opacity: 0;
+//   background: 0;
+//   transition: all .3s ease-in;
+// }
+
+.pswp__caption{
+  display: none;
+}
+.lazy {
+  // opacity: 0;
+  // transition: opacity .3s ease-in;
+
+  // &-delay {
+  //   transition: opacity .3s ease-in;
+  //   transition-delay: .3s;
+  // }
+}
+// a {
+//   transition: color 0.1s ease-in;
+// }

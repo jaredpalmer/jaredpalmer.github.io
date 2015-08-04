@@ -3,7 +3,7 @@
 # 2. config.build.yml
 # 3. config.yml
 
-name: palmdeezy.github.io
+name: jaredpalmer.com
 description: 
 author:
   name: Jared Palmer
@@ -17,7 +17,7 @@ include: ['.htaccess']
 
 # _config.build.yml sets future and show_drafts to false on `grunt build`
 future: true
-show_drafts: true
+show_drafts: false
 
 permalink: pretty
 paginate: 6
@@ -39,3 +39,12 @@ markdown: kramdown
 #     coderay_css: style
 
 pygments: true
+
+
+
+
+collections:
+  photos:
+    output: true
+  designs:
+    output: true

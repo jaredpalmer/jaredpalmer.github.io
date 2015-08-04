@@ -1,35 +1,94 @@
-<!DOCTYPE html>
-<html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{{ page.title }}</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!doctype html>
+<!--
 
-    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+           __                    __
+          / /___ _________  ____/ /
+     __  / / __ `/ ___/ _ \/ __  /
+    / /_/ / /_/ / /  /  __/ /_/ /
+    \____/____,_/_/  _____/\__,_/
+       / __ \____ _/ /___ ___  ___  _____
+      / /_/ / __ `/ / __ `__ \/ _ \/ ___/
+     / ____/ /_/ / / / / / / /  __/ /
+    /_/    \__,_/_/_/ /_/ /_/\___/_/
 
-    <!-- build:css({app,.tmp}) /css/main.css -->
-    <link rel="stylesheet" href="/_bower_components/normalize-css/normalize.css">
-    <!-- <link rel="stylesheet" href="/css/syntax.css"> -->
-    <link rel="stylesheet" href="/css/style.css">
-    <!-- endbuild -->
+                            Established in 1991.
+                            Cornell '13.
 
-    <!-- build:js(app) /js/head-scripts.js -->
-    <!-- Replace with a custom modernizer build for production -->
-    <script src="/_bower_components/modernizr/modernizr.js"></script>
-    <!-- endbuild -->
+-->
+<!--[if lte IE 8]> <html class="ie8"> <![endif]-->
+<!--[if IE 9]> <html class="ie9"> <![endif]-->
+<!--[if !IE]><!--><html lang="en" class="no-js"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="{{page.description}}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{page.title}}</title>
 
-  </head>
-  <body>
-    <!--[if lt IE 8]>
+  <!-- Web Application Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Web Starter Kit">
+  <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Jared Palmer">
+  <!-- <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png"> -->
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <!-- <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png"> -->
+  <meta name="msapplication-TileColor" content="#3372DF">
+
+  <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+  <meta property="og:title" content="{{ page.title }} | Jared Palmer">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{site.name}}{{page.url}}">
+  <meta property="og:image" content="{{site.name}}{{page.image}}">
+  <meta property="og:site_name" content="Jared Palmer">
+  <meta property="og:description" content="{{page.description}}">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@jaredpalmer">
+  <meta name="twitter:creator" content="@jaredpalmer">
+  <meta name="twitter:title" content="{{ page.title }} | Jared Palmer">
+  <meta name="twitter:description" content="{{page.description}}">
+  <meta name="twitter:image:src" content="{{site.name}}{{page.image}}">
+
+  <link href='//fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en' rel='stylesheet' type='text/css'>
+  <!-- build:css({app,.tmp}) /css/main.css -->
+  <!-- <link rel="stylesheet" href="/css/syntax.css"> -->
+  <link rel="stylesheet" href="/_bower_components/photoswipe/dist/photoswipe.css">
+  <link rel="stylesheet" href="/_bower_components/photoswipe/dist/default-skin/default-skin.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- endbuild -->
+
+  <!-- build:js(app) /js/head-scripts.js -->
+  <!-- Replace with a custom modernizer build for production -->
+  <script src="/_bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+
+</head>
+
+<body>
+  <!--[if lt IE 8]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <h1>blah</h1>
-    {{ content }}
 
+    {% assign n = page.navClass %}
+    {% include navbar.html navClass=n %}
+    <main id="content">
+
+        {{ content }}
+
+    </main>
+    {% include footer.html %}
     {% include scripts.html %}
     {% include googleanalytics.html %}
 
-  </body>
+</body>
+
 </html>

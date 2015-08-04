@@ -1,0 +1,213 @@
+%clearfix {
+  &:before {
+    content: '';
+    display: table;
+  }
+
+
+  &:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+
+}
+
+$small: 480px;
+$medium: 768px;
+$large: 1024px;
+$huge: 1440px;
+$rem-base: 16px !default;
+
+@mixin reset-box {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin image-2x($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+         (-o-min-device-pixel-ratio: 2.6/2),
+         (-webkit-min-device-pixel-ratio: 1.3),
+         (min-device-pixel-ratio: 1.3),
+         (min-resolution: 1.3dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}
+
+
+@mixin media-query($media-query) {
+  @if $media-query == small-only {
+    @media only screen and (max-width: $small - 1) {
+      @content;
+    }
+
+  }
+
+  @if $media-query == small {
+    @media only screen and (min-width: $small) {
+      @content;
+    }
+
+  }
+  @if $media-query == medium {
+    @media only screen and (min-width: $medium) {
+      @content;
+    }
+
+  }
+
+
+  @if $media-query == medium-only {
+    @media only screen and (min-width: $medium) and (max-width: $wide - 1) {
+      @content;
+    }
+
+  }
+
+
+  @if $media-query == large {
+    @media only screen and (min-width: $large) {
+      @content;
+    }
+
+  }
+
+
+  @if $media-query == huge {
+    @media only screen and (min-width: $huge) {
+      @content;
+    }
+
+  }
+
+}
+
+@mixin small-only {
+  @include media-query(small-only) {
+    @content
+  }
+;
+}
+@mixin small {
+  @include media-query(small) {
+    @content
+  }
+;
+}
+
+@mixin medium {
+  @include media-query(medium) {
+    @content
+  }
+;
+}
+
+@mixin medium-only {
+  @include media-query(medium-only) {
+    @content
+  }
+;
+}
+
+@mixin large {
+  @include media-query(large) {
+    @content
+  }
+;
+}
+
+
+@mixin huge {
+  @include media-query(huge) {
+    @content
+  }
+;
+}
+
+
+// RANGES
+// We use these functions to define ranges for various things, like media queries.
+@function lower-bound($range) {
+  @if length($range) <= 0 {
+    @return 0;
+  }
+
+@return nth($range, 1);
+}
+
+
+@function upper-bound($range) {
+  @if length($range) < 2 {
+    @return 999999999999;
+  }
+
+@return nth($range, 2);
+}
+
+
+// STRIP UNIT
+// It strips the unit of measure and returns it
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+
+// CONVERT TO REM
+@function convert-to-rem($value, $base-value: $rem-base) {
+  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  @if ($value == 0rem) {
+    $value: 0;
+  }
+
+// Turn 0rem into 0
+  @return $value;
+}
+
+
+// REM CALC
+// New Syntax, allows to optionally calculate on a different base value to counter compounding effect of rem's.
+// Call with 1, 2, 3 or 4 parameters, 'px' is not required but supported:
+//
+//   rem-calc(10 20 30px 40);
+//
+// Space delimited, if you want to delimit using comma's, wrap it in another pair of brackets
+//
+//   rem-calc((10, 20, 30, 40px));
+//
+// Optionally call with a different base (eg: 8px) to calculate rem.
+//
+//   rem-calc(16px 32px 48px, 8px);
+//
+// If you require to comma separate your list
+//
+//   rem-calc((16px, 32px, 48), 8px);
+@function rem-calc($values, $base-value: $rem-base) {
+  $max: length($values);
+
+  @if $max == 1 {
+    @return convert-to-rem(nth($values, 1), $base-value);
+  }
+
+$remValues: ();
+  @for $i from 1 through $max {
+    $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+  }
+
+  @return $remValues;
+}
+
+
+// OLD EM CALC
+// Deprecated: We'll drop support for this in 5.1.0, use rem-calc()
+@function emCalc($values) {
+  @return rem-calc($values);
+}
+
+
+// OLD EM CALC
+// Deprecated: We'll drop support for this in 5.1.0, use rem-calc()
+@function em-calc($values) {
+  @return rem-calc($values);
+}
