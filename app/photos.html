@@ -14,7 +14,7 @@ description: Photos by Jared Palmer
   {% assign photos = site.photos | sort: 'date' %}
   {% for photo in photos reversed  %}
   <article class="photo-item ">
-    <a href="{{photo.url}}">
+    <a href="{{photo.url | pretty }}">
       <header class="photo-info">
         <div class="photo-content">
           <h2 class="photo-title">{{photo.title}}</h2>
