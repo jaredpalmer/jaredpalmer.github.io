@@ -54,9 +54,9 @@ module.exports = function (grunt) {
         options: {
           server: {
             baseDir: [
-              ".jekyll",
-              ".tmp",
-              "<%= yeoman.app %>"
+              '.jekyll',
+              '.tmp',
+              '<%= yeoman.app %>'
             ]
           },
           watchTask: true
@@ -65,7 +65,7 @@ module.exports = function (grunt) {
       dist: {
         options: {
           server: {
-            baseDir: "<%= yeoman.dist %>"
+            baseDir: '<%= yeoman.dist %>'
           }
         }
       },
@@ -82,9 +82,9 @@ module.exports = function (grunt) {
         options: {
           server: {
             baseDir: [
-              ".jekyll",
-              ".tmp",
-              "<%= yeoman.app %>"
+              '.jekyll',
+              '.tmp',
+              '<%= yeoman.app %>'
             ]
           },
           watchTask: true
@@ -93,7 +93,7 @@ module.exports = function (grunt) {
     },
     bsReload: {
             css: {
-                reload: "style.css"
+                reload: 'style.css'
             },
             all: {
                 reload: true
@@ -308,7 +308,7 @@ module.exports = function (grunt) {
       },
       all: [
         'Gruntfile.js',
-        '<%= yeoman.app %>/js/**/*.js',
+        '<%= yeoman.app %>/js/main.js',
         'test/spec/**/*.js'
       ]
     },
@@ -353,6 +353,7 @@ module.exports = function (grunt) {
       'concurrent:server',
       'autoprefixer:dist',
       'browserSync:server',
+      'jshint:all',
       'watch'
     ]);
   });
@@ -390,7 +391,7 @@ module.exports = function (grunt) {
     'uglify',
     'imagemin',
     'svgmin',
-    'filerev',
+    // 'filerev',
     'usemin',
     'htmlmin'
     ]);
