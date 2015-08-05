@@ -157,6 +157,17 @@
       });
   };
 
+  var animateIn = function($el, $html) {
+    $.Velocity($el, {
+      opacity: 1,
+      translateY: 50,
+    }, {
+      duration:300,
+    }).promise().done(function() {
+      $el.html($html);
+    });
+  };
+
   $window.load(function() {
     $(this).resize($.throttle(50, resizer));
   });
@@ -166,40 +177,59 @@
     var rel = url.replace(root, '/');
     console.log(rel);
     $.get(rel).done(function(date) {
-        var response = parseResponse(date);
+      var response = parseResponse(date);
 
-        // console.log(response.$content);
-        if (!response.$content.length) {
-          document.location.href = url;
+      // console.log(response.$content);
+      if (!response.$content.length) {
+        document.location.href = url;
 
-          return false;
-        }
+        return false;
+      }
 
-        if (response.title.length) {
-          $('title')
-            .last()
-            .html(response.title);
-        }
+      if (response.title.length) {
+        $('title')
+          .last()
+          .html(response.title);
+      }
 
-        var $content = $('#content');
-        var $nav = $('.navbar');
-        var page = strip(rel);
-        $body.scrollTop(0);
-        $('.navbar .navbar-logo').css({color: '#000000'});
-        $content.velocity('transition.slideDownOut', {
-            duration: 250,
-          })
-          .promise()
-          .done(function() {
-            $content.velocity('transition.slideUpIn', {
-                duration: 250,
-              }).html(response.$content);
-            rerun();
-            initPhotoSwipeFromDOM('.gallery');
-            setupCanvas('#cntx-canvas', animateCntx);
-          });
-      })
-      .fail(function() {
+      var $content = $('#content');
+      var $nav = $('.navbar');
+      var page = strip(rel);
+      $body.scrollTop(0);
+      $('.navbar .navbar-logo').css({color: '#000000'});
+
+      // $content.velocity('transition.slideDownOut', {
+      //     duration: 250,
+      //   })
+      //   .promise()
+      //   .done(function() {
+      //     $content.velocity('transition.slideUpIn', {
+      //         duration: 250,
+      //       }).html(response.$content);
+      //     rerun();
+      //     setupCanvas('#cntx-canvas', animateCntx);
+      //   });
+
+      $.Velocity.animate($content, {
+         opacity: 0,
+         translateY: 20,
+       });
+
+      // Callback to fire once the animation is complete.
+      .then(function(elements) {
+         console.log('Resolved.');
+         elements.animateanimateIn($el, response.$content);
+       }).done(function() {
+         rerun();
+         setupCanvas('#cntx-canvas', animateCntx);
+       });
+
+      // // Callback to fire if an error occurs.
+      // .catch(function(error) {
+      //    console.log('Rejected.');
+      //  });
+
+    }).fail(function() {
         document.location.href = url;
 
         return false;
@@ -222,7 +252,6 @@
 
     rerun();
     setupCanvas('#cntx-canvas', animateCntx);
-    initPhotoSwipeFromDOM('.gallery');
 
     // $('.share').on('click', function(e) {
     //   e.preventDefault();
