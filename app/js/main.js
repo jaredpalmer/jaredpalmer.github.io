@@ -190,6 +190,7 @@
                         duration: 250
                       })
                       .html(response.$content);
+                      ga('send', 'pageview');
                   initPhotoSwipeFromDOM('.gallery');
                   rerun();
                   setupCanvas('#cntx-canvas', animateCntx);
