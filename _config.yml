@@ -9,6 +9,8 @@ author:
   name: Jared Palmer
   email: jared@palmer.net
 
+url: http://jaredpalmer.com
+
 # Grunt handles images and assets.
 exclude: ['img', 'css', 'js', 'fonts',
           '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
@@ -46,3 +48,12 @@ collections:
     output: true
   designs:
     output: true
+
+gems:
+  - jekyll-sitemap
+#
+# sitemap:
+#   lastmod: 2015-08-25
+#   priority: 0.7
+#   changefreq: 'weekly'
+#   exclude: 'yes'
