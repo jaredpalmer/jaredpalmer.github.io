@@ -362,7 +362,7 @@ module.exports = function (grunt) {
     'clean:server',
     'jekyll:check',
     'sass:server',
-    'jshint:all',
+    // 'jshint:all',
     'csslint:check'
     // 'scsslint'
   ]);
@@ -379,7 +379,7 @@ module.exports = function (grunt) {
     'uglify',
     'imagemin',
     'svgmin',
-    'filerev',
+    // 'filerev',
     'usemin',
     'htmlmin'
     ]);
