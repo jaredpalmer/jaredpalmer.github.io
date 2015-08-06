@@ -21,8 +21,8 @@ include: ['.htaccess']
 future: true
 show_drafts: false
 
-permalink: pretty
-paginate: 6
+permalink: /:title.html
+paginate: 5
 paginate_path: '/page:num'
 
 # Markdown library
@@ -40,13 +40,12 @@ markdown: kramdown
 #     coderay_bold_every: 10
 #     coderay_css: style
 
-pygments: true
+highlighter: pygments
 
 
 collections:
   photos:
     output: true
-    permalink: /photos/:title/
   designs:
     output: true
 
