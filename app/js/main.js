@@ -212,6 +212,7 @@
                   initPhotoSwipeFromDOM('.gallery');
                   rerun();
                   setupCanvas('#cntx-canvas', animateCntx);
+                  ga('send', 'pageview');
                 });
             }
           })
