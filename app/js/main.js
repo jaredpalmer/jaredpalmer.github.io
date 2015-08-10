@@ -240,11 +240,11 @@
       setupCanvas('#cntx-canvas', animateCntx);
 
       initPhotoSwipeFromDOM('.gallery');
-
-      $('.share').on('click', function(e) {
-        e.preventDefault();
-        window.open($(this).attr('href'), "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=500, left=500, width=400, height=400");
-      });
+      //
+      // $('.share').on('click', function(e) {
+      //   e.preventDefault();
+      //   window.open($(this).attr('href'), "_blank", "toolbar=yes, scrollbars=yes, resizable=yes, top=500, left=500, width=400, height=400");
+      // });
       // initPhotoSwipeFromDOM('.gallery2');
       // $('.lazy').unveil(500);
 

@@ -7,7 +7,7 @@
 # Ignore OS generated files #
 .DS_Store*
 ehthumbs.db
-Icon?
+#Icon?
 Thumbs.db
 
 # Always-ignore files and folders #
