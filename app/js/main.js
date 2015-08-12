@@ -121,18 +121,20 @@
     var windowWidth = $window.width();
     var bodyHeight = $('#content').height();
 
-    animateCntx = function () {
+    var animateCntx = function () {
       window.requestAnimationFrame(function () {
         $canvas = $('#cntx-canvas');
-        scrollTop = $window.scrollTop();
-        animationValue = scrollTop - $canvas.position().top;
-        // console.log(animationValue);
-        yVal = animationValue / 10;
-        yVal = -yVal.toFixed(5);
-        transform = 'translate3d(0px, ' + yVal + 'px, 0px)';
-        transform2 = 'translate3d(0px, ' + -yVal + 'px, 0px)';
-        $('.phone1').css(prefix + 'transform', transform);
-        $('.phone2').css(prefix + 'transform', transform2);
+        if ($canvas.length) {
+          var scrollTop = $window.scrollTop();
+          var animationValue = scrollTop - $canvas.position().top;
+          // console.log(animationValue);
+          var yVal = -(animationValue / 10).toFixed(5);
+          // yVal = -yVal.toFixed(5);
+          var transform = 'translate3d(0px, ' + yVal + 'px, 0px)';
+          var transform2 = 'translate3d(0px, ' + -yVal + 'px, 0px)';
+          $('.phone1').css(prefix + 'transform', transform);
+          $('.phone2').css(prefix + 'transform', transform2);
+        }
       });
     }
 
