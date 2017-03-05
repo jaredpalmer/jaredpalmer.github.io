@@ -40,10 +40,16 @@ class BlogIndex extends React.Component {
     return (
       <div>
         <Helmet
-          title={config.blogTitle}
+          title="Jared Palmer"
           meta={[
-            { name: 'description', content: 'Sample blog' },
-            { name: 'keywords', content: 'blog, articles' }
+            {
+              name: 'description',
+              content: 'Jared Palmer - Software Engineer at The Palmer Group'
+            },
+            {
+              name: 'keywords',
+              content: 'html, css, javascript, engineering, react, nodejs'
+            }
           ]}
         />
         <Container

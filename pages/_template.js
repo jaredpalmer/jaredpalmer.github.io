@@ -20,7 +20,6 @@ class Template extends React.Component {
           <Link
             style={{
               boxShadow: 'none',
-
               color: '#28a0e5',
               fontWeight: 'normal',
               fontSize: rhythm(0.53),
@@ -28,9 +27,9 @@ class Template extends React.Component {
               letterSpacing: rhythm(-0.02),
               fontFamily: "'SF Mono', 'Menlo', monospace"
             }}
-            to={prefixLink('/')}
+            to="/"
           >
-            @{config.blogTitle}
+            @jaredpalmer
           </Link>
           <div>
             <a
@@ -108,9 +107,9 @@ class Template extends React.Component {
               letterSpacing: rhythm(-0.02),
               fontFamily: "'SF Mono', 'Menlo', monospace"
             }}
-            to={prefixLink('/')}
+            to="/"
           >
-            @{config.blogTitle}
+            @jaredpalmer
           </Link>
         </h3>
       );

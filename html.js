@@ -5,6 +5,7 @@ import { TypographyStyle } from 'react-typography';
 import typography from './utils/typography';
 
 const BUILD_TIME = new Date().getTime();
+
 module.exports = React.createClass({
   displayName: 'HTML',
   propTypes: {
