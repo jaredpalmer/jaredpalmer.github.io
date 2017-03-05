@@ -25,6 +25,6 @@
     "develop": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve-build",
-    "deploy": "gatsby build --prefix-links && gh-pages -d public"
+    "deploy": "gatsby build --prefix-links && gh-pages -d public --branch master"
   }
 }
