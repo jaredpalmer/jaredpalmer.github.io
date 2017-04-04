@@ -16,7 +16,7 @@ class MarkdownWrapper extends React.Component {
         <Container
           style={{
             maxWidth: rhythm(24),
-            padding: `${rhythm(0.75)} ${rhythm(0.75)} ${rhythm(1.5)}`
+            padding: `${rhythm(0.75)} ${rhythm(0.75)} ${rhythm(1.5)}`,
           }}
         >
           <Helmet title={`${post.title} | ${config.blogTitle}`} />
@@ -25,36 +25,25 @@ class MarkdownWrapper extends React.Component {
           <em
             style={{
               display: 'block',
-              marginBottom: rhythm(2)
+              marginBottom: rhythm(2),
             }}
           >
             Posted {moment(post.date).format('MMMM D, YYYY')}
           </em>
           <hr
             style={{
-              marginBottom: rhythm(2)
+              marginBottom: rhythm(2),
             }}
           />
           <ReadNext post={post} pages={route.pages} />
         </Container>
-        <div style={{ width: '100%', backgroundColor: '#eee' }}>
-          <Container
-            style={{
-              maxWidth: rhythm(24),
-              padding: `${rhythm(0.75)} ${rhythm(0.75)} ${rhythm(1.5)}`
-            }}
-          >
-            <h4>Get new articles via email</h4>
-            <p>I only publish once in a while.</p>
-          </Container>
-        </div>
       </div>
     );
   }
 }
 
 MarkdownWrapper.propTypes = {
-  route: React.PropTypes.object
+  route: React.PropTypes.object,
 };
 
 export default MarkdownWrapper;
