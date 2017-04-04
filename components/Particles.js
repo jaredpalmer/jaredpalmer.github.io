@@ -60,12 +60,9 @@ export default class TrianglifyComponent extends Component {
   }
 
   render() {
-    const width = window.innerWidth; // canvas width
-    const height = window.innerHeight; // canvas height
-
     return (
       <canvas
-        id={'canvas-pattern'}
+        id="canvas-pattern"
         style={{ position: 'fixed', bottom: '0' }}
         ref={ref => {
           this.container = ref;
