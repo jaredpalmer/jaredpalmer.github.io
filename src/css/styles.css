@@ -1,0 +1,83 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#___gatsby,
+#___gatsby:first-child {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  color: #24292e;
+  text-rendering: optimizeLegibility;
+  font-size: 16px;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #0288f6;
+  text-decoration: none;
+  -webkit-user-select: text;
+  will-change: opacity;
+  transition: opacity 100ms ease-in;
+}
+
+a:hover {
+  cursor: pointer;
+  opacity: .6;
+}
+
+hr {
+  border: 0;
+  height: 0;
+  border-bottom: 1px solid #d9dde1;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  /* letter-spacing: -.03em; */
+}
+
+.svg-1 {
+  height: 24px;
+  width: 24px;
+}
+
+.svg-fb {
+  fill: #3b5998;
+}
+
+.svg-twitter {
+  fill: #55acee;
+}
+
+.svg-gray {
+  fill: #666;
+}
+
+.bg-black {
+  background-color: #000;
+}
+
+.bg-black h1,
+.bg-black h2,
+.bg-black h3 {
+  color: #fff;
+}

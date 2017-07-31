@@ -6,3 +6,5 @@ public
 *.log
 archive
 .vscode
+public
+.cache
