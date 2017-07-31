@@ -1,16 +1,10 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import { prefixLink } from 'gatsby-helpers';
-import { TypographyStyle } from 'react-typography';
-import typography from './utils/typography';
 
 const BUILD_TIME = new Date().getTime();
 
-module.exports = React.createClass({
-  displayName: 'HTML',
-  propTypes: {
-    body: React.PropTypes.string
-  },
+class HTML extends React.Component {
   render() {
     const { body } = this.props;
     const head = Helmet.rewind();
@@ -20,7 +14,7 @@ module.exports = React.createClass({
       css = (
         <style
           dangerouslySetInnerHTML={{
-            __html: require('!raw!./public/styles.css')
+            __html: require('!raw!./public/styles.css'),
           }}
         />
       );
@@ -37,7 +31,6 @@ module.exports = React.createClass({
           />
           {head.title.toComponent()}
           {head.meta.toComponent()}
-          <TypographyStyle typography={typography} />
           {css}
         </head>
         <body>
@@ -47,4 +40,6 @@ module.exports = React.createClass({
       </html>
     );
   }
-});
+}
+
+module.exports = HTML;
