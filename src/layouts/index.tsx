@@ -13,7 +13,7 @@ export default class Template extends React.Component<TemplateProps, {}> {
     return (
       <div>
         <Helmet
-          title="Formik"
+          title="Jared Palmer"
           meta={[
             {
               name: 'description',
