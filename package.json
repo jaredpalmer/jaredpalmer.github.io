@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "gatsby develop",
-    "bulid": "gatsby build",
+    "build": "gatsby build",
     "now-start": "serve -s public",
     "now-build": "gatsby build --prefix-links",
     "deploy": "gatsby build --prefix-links && gh-pages -d public --branch master"
