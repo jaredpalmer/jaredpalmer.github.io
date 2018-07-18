@@ -31,6 +31,7 @@ interface BlogPostTemplateProps {
         description: string;
         image: string;
         date: string;
+        path: string;
       };
     };
   };
@@ -107,7 +108,7 @@ export default class BlogPostTemplate extends React.Component<
               color={theme.color.white}
               props={{
                 href: `https://twitter.com/intent/tweet?${qs.stringify({
-                  url: typeof window !== undefined && window.location.href,
+                  url: `https://jaredpalmer.com${post.frontmatter.path}`,
                   via: 'jaredpalmer',
                 })}`,
               }}
@@ -148,6 +149,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        path
         description
         image
         date

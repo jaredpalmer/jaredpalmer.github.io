@@ -4,7 +4,7 @@ date: "2018-02-20"
 title: "React Podcast #2: Formik, Razzle, and the Future of React"
 description: "Michael Jackson and Jared Palmer discuss Formik, Razzle, and the future of React on React Podcast Episode #2"
 author: "Jared Palmer"
-image: 
+image: "https://cdn.changelog.com/uploads/covers/the-react-podcast-original.png?v=63690914134"
 draft: false
 ---
 
