@@ -39,6 +39,7 @@ export const NavMobile: React.SFC<NavMobileProps> = ({ items, isOpen }) => {
       pose={isOpen ? 'open' : 'closed'}
       pointerEvents={isOpen ? 'auto' : 'none'}
       backgroundColor="#000"
+      opacity="0"
       paddingTop="4.45rem"
       paddingBottom="2rem"
       paddingLeft="3rem"
