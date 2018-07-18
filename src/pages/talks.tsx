@@ -88,7 +88,7 @@ export default class Talks extends React.Component<void> {
                     }}
                     marginLeft=".25rem"
                     textDecoration="underline"
-                    color={theme.color.purple}
+                    color={theme.color.black}
                     fontStyle="italic"
                     props={{ to: '/contact' }}
                   >

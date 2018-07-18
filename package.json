@@ -8,6 +8,7 @@
   "scripts": {
     "start": "gatsby develop",
     "bulid": "gatsby build",
+    "start:prod": "serve -s public",
     "deploy": "gatsby build --prefix-links && gh-pages -d public --branch master"
   },
   "dependencies": {
@@ -38,6 +39,7 @@
     "react-media": "^1.8.0",
     "react-pose": "^2.1.2",
     "request": "^2.87.0",
+    "serve": "^9.2.0",
     "ts-loader": "^4.3.0",
     "tslint": "^5.10.0",
     "typescript": "^2.8.3"
