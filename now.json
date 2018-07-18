@@ -2,8 +2,5 @@
   "name": "jaredpalmer",
   "static": {
     "trailingSlash": true
-  },
-  "files": [
-    "public"
-  ]
+  }
 }
