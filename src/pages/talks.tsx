@@ -34,6 +34,8 @@ export default class Talks extends React.Component<void> {
               fontSize="2.75rem"
               letterSpacing="-.03em"
               marginBottom="3rem"
+              position="relative"
+              background={theme.color.white}
               flex="1"
               css={{
                 [theme.media.medium]: {

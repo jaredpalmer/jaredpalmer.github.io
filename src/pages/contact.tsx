@@ -66,9 +66,11 @@ export default class Contact extends React.Component<void, TalksState> {
               }}
             >
               <Block
-                component="h2"
+                component="h1"
                 color={theme.color.dark}
                 fontWeight={800}
+                position="relative"
+                background={theme.color.white}
                 marginBottom="1rem"
                 fontSize="3rem"
                 letterSpacing="-.03em"

@@ -34,6 +34,8 @@ export const Repo: React.SFC<RepoProps> = ({
         fontWeight={800}
         fontSize="1rem"
         marginBottom="1rem"
+        position="relative"
+        background={theme.color.white}
         letterSpacing="-.02em"
       >
         {name}
@@ -43,6 +45,8 @@ export const Repo: React.SFC<RepoProps> = ({
         fontSize=".8rem"
         color={theme.color.grayLighter}
         marginBottom=".5rem"
+        position="relative"
+        background={theme.color.white}
       >
         {description}
       </Block>

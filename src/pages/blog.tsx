@@ -47,6 +47,8 @@ export default class Blog extends React.Component<BlogProps> {
               component="h1"
               color={theme.color.dark}
               fontWeight={800}
+              position="relative"
+              background={theme.color.white}
               fontSize="2.75rem"
               letterSpacing="-.03em"
               marginBottom="3rem"

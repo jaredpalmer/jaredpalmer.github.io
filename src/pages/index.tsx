@@ -382,6 +382,8 @@ export default class Index extends React.Component<IndexProps, IndexState> {
                 color={theme.color.dark}
                 fontWeight={theme.bold}
                 fontSize="2.25rem"
+                position="relative"
+                background={theme.color.white}
                 letterSpacing="-.03em"
                 flex="1"
                 css={{
@@ -402,6 +404,8 @@ export default class Index extends React.Component<IndexProps, IndexState> {
                 fontSize="1.5rem"
                 letterSpacing="-.01em"
                 lineHeight="1.3"
+                position="relative"
+                background={theme.color.white}
                 paddingTop=".1rem"
                 flex="3"
                 css={{
