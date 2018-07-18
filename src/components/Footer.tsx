@@ -20,7 +20,7 @@ export const Footer: React.SFC<FooterProps> = props => {
         margin="0 auto 2rem"
         maxWidth={300}
         alignItems="center"
-        justifyContent="center"
+        justifyContent="space-between"
       >
         <NavLink
           key={`footer-projects`}
@@ -28,9 +28,7 @@ export const Footer: React.SFC<FooterProps> = props => {
           text="Projects"
           marginRight="1rem"
         />
-        {LINKS.map(item => (
-          <NavLink key={`footer-${item.text}`} {...item} display="block" />
-        ))}
+        {LINKS.map(item => <NavLink key={`footer-${item.text}`} {...item} />)}
       </Row>
       <Block marginBottom="2rem">
         <Social />
