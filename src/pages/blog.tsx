@@ -34,7 +34,7 @@ export default class Blog extends React.Component<BlogProps> {
         title="Blogs &amp; Workshops"
         description="A blog about JavaScript, React, Node, UI, UX, and everything else design &amp; development."
       >
-        <Wrapper paddingTop="10rem">
+        <Wrapper paddingTop="10rem" paddingBottom="7rem">
           <Column
             css={{
               [theme.media.medium]: {
